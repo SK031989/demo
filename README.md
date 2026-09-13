@@ -1,4 +1,4 @@
-﻿<img src="images/logo.jpg" alt="Virasat Royale Logo" width="160"/>
+<img src="images/logo.jpg" alt="Virasat Royale Logo" width="160"/>
 
 # Virasat Royale — Luxury Wedding & Event Rentals
 
@@ -141,9 +141,9 @@ The full design system is documented in [DESIGN.md](DESIGN.md).
 
 | Channel | Details |
 |---|---|
-| Phone | +91 98200 45678 / 45679 |
-| WhatsApp | wa.me/919820045679 |
-| Email | concierge@virasatroyale.com |
+| Phone | +91 98888 91465 |
+| WhatsApp | wa.me/919888891465 |
+| Email | sandeeplmitm@gmail.com |
 | Delhi | The Grand Pavilion, MG Road, New Delhi |
 | Mumbai | BKC Depot, Mumbai |
 | Hours | Mon - Sun: 10 AM - 8 PM IST |
