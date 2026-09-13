@@ -80,14 +80,21 @@
       pointer-events: auto;
     }
 
-    body.menu-open {
-      /* Lock page scroll when mobile drawer is open.
-         touch-action is kept pan-x so the drawer itself can still receive
-         horizontal swipe gestures on iOS. */
+    /* iOS Safari scroll lock: overflow:hidden on html stops background scroll
+       WITHOUT collapsing body, so fixed-position children (the drawer) stay
+       fully visible and correctly sized. */
+    html.menu-open {
       overflow: hidden;
-      /* Prevent iOS Safari from scrolling the page behind the drawer */
-      position: fixed;
-      width: 100%;
+    }
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    /* Hide crowded header actions on very small screens — only show hamburger */
+    @media (max-width: 479px) {
+      #header-quote-btn   { display: none !important; }
+      #header-cart-btn    { display: none !important; }
+      #header-person-btn  { display: none !important; }
     }
 
     /* Mobile accordion arrows */
@@ -435,124 +442,143 @@
           data-path="faq" href="#faq">FAQ</a><a
           class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2"
           data-path="contact" href="#quote-enquiry">Contact</a>
-      </nav><button aria-label="Open mobile menu"
-        class="xl:hidden flex items-center justify-center w-9 h-9 rounded bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors ml-2"
-        id="hamburger-btn" onclick="toggleMobileMenu()"><span class="material-symbols-outlined text-[22px]"
-          id="hamburger-icon">menu</span></button>
-      <div class="flex items-center gap-space-xs shrink-0"><a
-          class="inline-flex items-center gap-2 bg-surface-container-low hover:bg-surface-container text-on-surface px-3.5 py-2 text-label-caps font-label-caps uppercase tracking-wider transition-all"
-          data-path="quote-cart" href="#"><span
-            class="material-symbols-outlined text-[16px] text-primary">shopping_bag</span><span
-            class="hidden sm:inline">Quote Cart</span><span
-            class="px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-caps text-[10px] leading-tight">0</span></a><a
-          class="inline-flex items-center gap-1.5 bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-3 sm:px-4 py-2 text-label-caps font-label-caps uppercase tracking-wider shadow-sm transition-all"
-          href="#quote-enquiry"><span class="hidden sm:inline" id="header-quote-text">Request a Quote</span><span
-            class="sm:hidden font-label-caps text-[11px] tracking-wider">Quote</span><span
-            class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
-        <div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface">
-          <span class="material-symbols-outlined text-[18px]">person</span>
-        </div>
-      </div>
-    </div><!-- MOBILE MENU OVERLAY -->
-    <div class="fixed inset-0 bg-inverse-surface/50 z-[60] backdrop-blur-sm xl:hidden" id="menu-overlay"
-      onclick="toggleMobileMenu()"></div>
-    <!-- MOBILE MENU DRAWER -->
-    <div
-      class="fixed top-0 right-0 h-full w-[85vw] max-w-sm bg-surface z-[70] xl:hidden flex flex-col shadow-[0_0_40px_rgba(0,0,0,0.2)] overflow-y-auto"
-      id="mobile-menu">
-      <!-- Drawer Header -->
-      <div class="flex items-center justify-between px-5 py-4 border-b border-surface-container">
-        <div class="flex items-center gap-2">
-          <img alt="Virasat Royale Logo" class="h-7 w-auto object-contain" src="images/logo.jpg">
-          <span class="font-title-lg text-[15px] tracking-tight text-on-surface">VIRASAT <span
-              class="italic text-primary">Royale</span></span>
-        </div>
-        <button aria-label="Close menu"
-          class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors"
-          onclick="toggleMobileMenu()">
-          <span class="material-symbols-outlined text-[20px]">close</span>
-        </button>
-      </div>
-      <!-- Drawer Links -->
-      <nav class="flex flex-col px-4 py-3 gap-1 flex-1">
-        <a class="flex items-center gap-3 px-3 py-3 rounded text-primary font-semibold font-label-md text-label-md hover:bg-surface-container transition-colors"
-          href="#" onclick="toggleMobileMenu()">
-          <span class="material-symbols-outlined text-[18px]">home</span>Home
-        </a>
-        <a class="flex items-center gap-3 px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors"
-          href="#" onclick="toggleMobileMenu()">
-          <span class="material-symbols-outlined text-[18px]">info</span>About
-        </a>
-        <!-- Rentals Accordion -->
-        <div class="mobile-acc">
-          <button
-            class="w-full flex items-center justify-between px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors mobile-acc-toggle"
-            onclick="this.closest('.mobile-acc').classList.toggle('mobile-acc-open')">
-            <span class="flex items-center gap-3"><span
-                class="material-symbols-outlined text-[18px] text-primary">chair</span>Rentals</span>
-            <span class="material-symbols-outlined text-[18px] mobile-acc-icon">expand_more</span>
-          </button>
-          <div class="mobile-acc-content pl-9 flex flex-col gap-1 pb-1">
-            <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
-              href="#rentals-catalog" onclick="toggleMobileMenu()">Tables &amp; Chairs</a>
-            <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
-              href="#rentals-catalog" onclick="toggleMobileMenu()">Royal Seating</a>
-            <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
-              href="#rentals-catalog" onclick="toggleMobileMenu()">Mandap &amp; Stages</a>
-            <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
-              href="#rentals-catalog" onclick="toggleMobileMenu()">Lighting &amp; Chandeliers</a>
-            <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
-              href="#rentals-catalog" onclick="toggleMobileMenu()">Tableware &amp; Glass</a>
-            <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
-              href="#rentals-catalog" onclick="toggleMobileMenu()">Tents &amp; Canopies</a>
-            <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
-              href="#rentals-catalog" onclick="toggleMobileMenu()">DJ &amp; Acoustic Truss</a>
-          </div>
-        </div>
-        <!-- Packages Accordion -->
-        <div class="mobile-acc">
-          <button
-            class="w-full flex items-center justify-between px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors"
-            onclick="this.closest('.mobile-acc').classList.toggle('mobile-acc-open')">
-            <span class="flex items-center gap-3"><span
-                class="material-symbols-outlined text-[18px] text-primary">inventory_2</span>Packages</span>
-            <span class="material-symbols-outlined text-[18px] mobile-acc-icon">expand_more</span>
-          </button>
-          <div class="mobile-acc-content pl-9 flex flex-col gap-1 pb-1">
-            <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
-              href="#packages" onclick="toggleMobileMenu()">Essential Soirée — from ₹85,000</a>
-            <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
-              href="#packages" onclick="toggleMobileMenu()">Grand Sangeet — from ₹2,40,000</a>
-            <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
-              href="#packages" onclick="toggleMobileMenu()">Royal Heritage — from ₹5,50,000</a>
-          </div>
-        </div>
-        <a class="flex items-center gap-3 px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors"
-          href="#gallery" onclick="toggleMobileMenu()">
-          <span class="material-symbols-outlined text-[18px]">photo_library</span>Gallery
-        </a>
-        <a class="flex items-center gap-3 px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors"
-          href="#faq" onclick="toggleMobileMenu()">
-          <span class="material-symbols-outlined text-[18px]">help_outline</span>FAQ
-        </a>
-        <a class="flex items-center gap-3 px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors"
-          href="#quote-enquiry" onclick="toggleMobileMenu()">
-          <span class="material-symbols-outlined text-[18px]">mail</span>Contact
-        </a>
       </nav>
-      <!-- Drawer Footer CTAs -->
-      <div class="px-4 py-4 border-t border-surface-container flex flex-col gap-3">
-        <a class="flex items-center justify-center gap-2 bg-primary text-on-primary px-4 py-3 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-all"
-          href="#quote-enquiry" onclick="toggleMobileMenu()">
-          <span>Request a Quote</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+      <!-- Hamburger always visible on non-xl -->
+      <button aria-label="Open mobile menu"
+        class="xl:hidden flex items-center justify-center w-9 h-9 rounded bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors ml-auto"
+        id="hamburger-btn" onclick="toggleMobileMenu()">
+        <span class="material-symbols-outlined text-[22px]" id="hamburger-icon">menu</span>
+      </button>
+      <!-- Header right actions: hidden on xs (≤479px) to prevent crowding -->
+      <div class="hidden xs:flex sm:flex items-center gap-space-xs shrink-0" id="header-cart-btn">
+        <a class="inline-flex items-center gap-2 bg-surface-container-low hover:bg-surface-container text-on-surface px-3.5 py-2 text-label-caps font-label-caps uppercase tracking-wider transition-all"
+          data-path="quote-cart" href="#">
+          <span class="material-symbols-outlined text-[16px] text-primary">shopping_bag</span>
+          <span class="hidden sm:inline">Quote Cart</span>
+          <span class="px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-caps text-[10px] leading-tight">0</span>
         </a>
-        <a class="flex items-center justify-center gap-2 bg-[#25D366]/10 text-[#25D366] px-4 py-3 font-label-md text-label-md hover:bg-[#25D366]/20 transition-all"
-          href="https://wa.me/919820045679" rel="noopener" target="_blank">
-          <span class="material-symbols-outlined text-[18px]">chat</span><span>WhatsApp Concierge</span>
-        </a>
+      </div>
+      <a id="header-quote-btn"
+        class="hidden sm:inline-flex items-center gap-1.5 bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-3 sm:px-4 py-2 text-label-caps font-label-caps uppercase tracking-wider shadow-sm transition-all"
+        href="#quote-enquiry">
+        <span id="header-quote-text">Request a Quote</span>
+        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+      </a>
+      <div id="header-person-btn" class="hidden sm:flex w-8 h-8 rounded-full bg-surface-container-low items-center justify-center text-on-surface">
+        <span class="material-symbols-outlined text-[18px]">person</span>
       </div>
     </div>
   </header>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       MOBILE MENU — direct <body> children so the header's backdrop-blur
+       stacking context CANNOT clip or constrain the drawer/overlay.
+       ═══════════════════════════════════════════════════════════════════ -->
+  <!-- Overlay (darkened backdrop) -->
+  <div class="fixed inset-0 bg-inverse-surface/50 z-[60] backdrop-blur-sm xl:hidden" id="menu-overlay"
+    onclick="toggleMobileMenu()"></div>
+
+  <!-- Slide-in drawer -->
+  <div class="fixed top-0 right-0 h-full w-[85vw] max-w-sm bg-surface z-[70] xl:hidden flex flex-col shadow-[0_0_40px_rgba(0,0,0,0.2)] overflow-y-auto"
+    id="mobile-menu">
+    <!-- Drawer Header -->
+    <div class="flex items-center justify-between px-5 py-4 border-b border-surface-container shrink-0">
+      <div class="flex items-center gap-2">
+        <img alt="Virasat Royale Logo" class="h-7 w-auto object-contain" src="images/logo.jpg">
+        <span class="font-title-lg text-[15px] tracking-tight text-on-surface">VIRASAT
+          <span class="italic text-primary">Royale</span></span>
+      </div>
+      <button aria-label="Close menu"
+        class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors"
+        onclick="toggleMobileMenu()">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </div>
+    <!-- Drawer Nav Links -->
+    <nav class="flex flex-col px-4 py-3 gap-1 flex-1 overflow-y-auto">
+      <a class="flex items-center gap-3 px-3 py-3 rounded text-primary font-semibold font-label-md text-label-md hover:bg-surface-container transition-colors"
+        href="#" onclick="toggleMobileMenu()">
+        <span class="material-symbols-outlined text-[18px]">home</span>Home
+      </a>
+      <a class="flex items-center gap-3 px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors"
+        href="#" onclick="toggleMobileMenu()">
+        <span class="material-symbols-outlined text-[18px]">info</span>About
+      </a>
+      <!-- Rentals Accordion -->
+      <div class="mobile-acc">
+        <button
+          class="w-full flex items-center justify-between px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors"
+          onclick="this.closest('.mobile-acc').classList.toggle('mobile-acc-open')">
+          <span class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[18px] text-primary">chair</span>Rentals
+          </span>
+          <span class="material-symbols-outlined text-[18px] mobile-acc-icon">expand_more</span>
+        </button>
+        <div class="mobile-acc-content pl-9 flex flex-col gap-1 pb-1">
+          <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+            href="#rentals-catalog" onclick="toggleMobileMenu()">Tables &amp; Chairs</a>
+          <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+            href="#rentals-catalog" onclick="toggleMobileMenu()">Royal Seating</a>
+          <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+            href="#rentals-catalog" onclick="toggleMobileMenu()">Mandap &amp; Stages</a>
+          <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+            href="#rentals-catalog" onclick="toggleMobileMenu()">Lighting &amp; Chandeliers</a>
+          <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+            href="#rentals-catalog" onclick="toggleMobileMenu()">Tableware &amp; Glass</a>
+          <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+            href="#rentals-catalog" onclick="toggleMobileMenu()">Tents &amp; Canopies</a>
+          <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+            href="#rentals-catalog" onclick="toggleMobileMenu()">DJ &amp; Acoustic Truss</a>
+        </div>
+      </div>
+      <!-- Packages Accordion -->
+      <div class="mobile-acc">
+        <button
+          class="w-full flex items-center justify-between px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors"
+          onclick="this.closest('.mobile-acc').classList.toggle('mobile-acc-open')">
+          <span class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[18px] text-primary">inventory_2</span>Packages
+          </span>
+          <span class="material-symbols-outlined text-[18px] mobile-acc-icon">expand_more</span>
+        </button>
+        <div class="mobile-acc-content pl-9 flex flex-col gap-1 pb-1">
+          <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+            href="#packages" onclick="toggleMobileMenu()">Essential Soirée — from ₹85,000</a>
+          <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+            href="#packages" onclick="toggleMobileMenu()">Grand Sangeet — from ₹2,40,000</a>
+          <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors"
+            href="#packages" onclick="toggleMobileMenu()">Royal Heritage — from ₹5,50,000</a>
+        </div>
+      </div>
+      <a class="flex items-center gap-3 px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors"
+        href="#gallery" onclick="toggleMobileMenu()">
+        <span class="material-symbols-outlined text-[18px]">photo_library</span>Gallery
+      </a>
+      <a class="flex items-center gap-3 px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors"
+        href="#faq" onclick="toggleMobileMenu()">
+        <span class="material-symbols-outlined text-[18px]">help_outline</span>FAQ
+      </a>
+      <a class="flex items-center gap-3 px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors"
+        href="#quote-enquiry" onclick="toggleMobileMenu()">
+        <span class="material-symbols-outlined text-[18px]">mail</span>Contact
+      </a>
+    </nav>
+    <!-- Drawer Footer CTAs -->
+    <div class="px-4 py-4 border-t border-surface-container flex flex-col gap-3 shrink-0">
+      <a class="flex items-center justify-center gap-2 bg-primary text-on-primary px-4 py-3 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-all"
+        href="#quote-enquiry" onclick="toggleMobileMenu()">
+        <span>Request a Quote</span>
+        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+      </a>
+      <a class="flex items-center justify-center gap-2 bg-[#25D366]/10 text-[#25D366] px-4 py-3 font-label-md text-label-md hover:bg-[#25D366]/20 transition-all"
+        href="https://wa.me/919820045679" rel="noopener" target="_blank">
+        <span class="material-symbols-outlined text-[18px]">chat</span>
+        <span>WhatsApp Concierge</span>
+      </a>
+    </div>
+  </div>
+  <!-- /MOBILE MENU -->
+
   <main class="w-full pt-20 bg-background overflow-x-hidden">
     <div class="flex flex-col w-full">
       <!-- 1. HERO SECTION (Immersive Architectural Splendor) -->
@@ -2379,33 +2405,27 @@
 
   <script>
     // Mobile Menu Toggle
-    // iOS Safari needs position:fixed on body to prevent background scroll,
-    // but that resets scrollY. We save/restore it around the toggle.
-    var _menuScrollY = 0;
-
     function toggleMobileMenu() {
-      var menu = document.getElementById('mobile-menu');
+      var menu    = document.getElementById('mobile-menu');
       var overlay = document.getElementById('menu-overlay');
-      var icon = document.getElementById('hamburger-icon');
-      var isOpen = menu.classList.contains('open');
+      var icon    = document.getElementById('hamburger-icon');
+      var isOpen  = menu.classList.contains('open');
+
       if (isOpen) {
-        // Restore scroll position before removing fixed positioning
         menu.classList.remove('open');
         overlay.classList.remove('open');
         document.body.classList.remove('menu-open');
-        document.body.style.top = '';
-        window.scrollTo(0, _menuScrollY);
+        document.documentElement.classList.remove('menu-open');
         if (icon) icon.textContent = 'menu';
       } else {
-        // Save current scroll position, then lock body
-        _menuScrollY = window.pageYOffset || document.documentElement.scrollTop;
-        document.body.style.top = '-' + _menuScrollY + 'px';
         menu.classList.add('open');
         overlay.classList.add('open');
         document.body.classList.add('menu-open');
+        document.documentElement.classList.add('menu-open'); // iOS Safari scroll lock
         if (icon) icon.textContent = 'close';
       }
     }
+
     // Close menu on ESC
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
@@ -2413,20 +2433,15 @@
         if (menu && menu.classList.contains('open')) toggleMobileMenu();
       }
     });
+
     // Close menu on resize to desktop
     window.addEventListener('resize', function () {
       if (window.innerWidth >= 1280) {
         var menu = document.getElementById('mobile-menu');
-        var overlay = document.getElementById('menu-overlay');
-        if (menu && menu.classList.contains('open')) {
-          menu.classList.remove('open');
-          overlay.classList.remove('open');
-          document.body.classList.remove('menu-open');
-          document.body.style.top = '';
-          window.scrollTo(0, _menuScrollY);
-        }
+        if (menu && menu.classList.contains('open')) toggleMobileMenu();
       }
     });
+
 
   </script>
 </body>
