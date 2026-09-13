@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -42,7 +42,9 @@
     }
 
     /* ===== RESPONSIVE FIXES ===== */
-    html,
+    /* NOTE: overflow-x:hidden must NOT be set on <html> — doing so on both
+       html + body creates a new scroll container that blocks vertical scroll.
+       Only body gets overflow-x:hidden. html keeps overflow-y:auto (default). */
     body {
       overflow-x: hidden;
     }
