@@ -24,8 +24,18 @@
         padding: 0;
       }
 
+      /* ---- Mobile scroll essentials ---- */
+      html {
+        /* Allow vertical touch scrolling on all devices */
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-y;
+      }
+
       body {
-        overscroll-behavior: none;
+        /* overscroll-behavior:none was suppressing touch-scroll on some
+           Android WebViews — removed so native fling/momentum works */
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-y;
       }
 
       main> :first-child {
@@ -71,7 +81,13 @@
     }
 
     body.menu-open {
+      /* Lock page scroll when mobile drawer is open.
+         touch-action is kept pan-x so the drawer itself can still receive
+         horizontal swipe gestures on iOS. */
       overflow: hidden;
+      /* Prevent iOS Safari from scrolling the page behind the drawer */
+      position: fixed;
+      width: 100%;
     }
 
     /* Mobile accordion arrows */
@@ -2363,17 +2379,27 @@
 
   <script>
     // Mobile Menu Toggle
+    // iOS Safari needs position:fixed on body to prevent background scroll,
+    // but that resets scrollY. We save/restore it around the toggle.
+    var _menuScrollY = 0;
+
     function toggleMobileMenu() {
       var menu = document.getElementById('mobile-menu');
       var overlay = document.getElementById('menu-overlay');
       var icon = document.getElementById('hamburger-icon');
       var isOpen = menu.classList.contains('open');
       if (isOpen) {
+        // Restore scroll position before removing fixed positioning
         menu.classList.remove('open');
         overlay.classList.remove('open');
         document.body.classList.remove('menu-open');
+        document.body.style.top = '';
+        window.scrollTo(0, _menuScrollY);
         if (icon) icon.textContent = 'menu';
       } else {
+        // Save current scroll position, then lock body
+        _menuScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        document.body.style.top = '-' + _menuScrollY + 'px';
         menu.classList.add('open');
         overlay.classList.add('open');
         document.body.classList.add('menu-open');
@@ -2396,9 +2422,12 @@
           menu.classList.remove('open');
           overlay.classList.remove('open');
           document.body.classList.remove('menu-open');
+          document.body.style.top = '';
+          window.scrollTo(0, _menuScrollY);
         }
       }
     });
+
   </script>
 </body>
 
