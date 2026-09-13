@@ -1,0 +1,1470 @@
+﻿<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>Virasat Royale - Luxury Wedding &amp; Event Rentals</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; } /* ===== RESPONSIVE FIXES ===== */
+html, body { overflow-x: hidden; }
+/* Mobile hamburger drawer */
+#mobile-menu { transform: translateX(100%); transition: transform 0.35s cubic-bezier(0.4,0,0.2,1); }
+#mobile-menu.open { transform: translateX(0); }
+#menu-overlay { opacity:0; pointer-events:none; transition: opacity 0.35s; }
+#menu-overlay.open { opacity:1; pointer-events:auto; }
+body.menu-open { overflow: hidden; }
+/* Mobile accordion arrows */
+.mobile-acc-icon { transition: transform 0.25s; }
+.mobile-acc-open .mobile-acc-icon { transform: rotate(180deg); }
+.mobile-acc-content { max-height:0; overflow:hidden; transition: max-height 0.3s ease; }
+.mobile-acc-open .mobile-acc-content { max-height:600px; }
+/* Topbar mobile: show only phone + wa icons on small screens */
+@media (max-width: 639px) {
+  #topbar-phone-text { display:none; }
+  #topbar-wa-text { display:none; }
+}
+/* Hero responsive text */
+@media (max-width: 639px) {
+  .hero-headline { font-size: 2.1rem !important; line-height: 2.6rem !important; }
+  .hero-sub { font-size: 1rem !important; line-height: 1.6rem !important; }
+  .hero-cta-group { flex-direction: column !important; align-items: stretch !important; }
+  .hero-cta-group a { text-align:center; justify-content:center; }
+  .hero-trust-strip { gap: 0.5rem 1.25rem !important; }
+}
+@media (min-width:640px) and (max-width:1023px) {
+  .hero-headline { font-size: 2.9rem !important; line-height: 3.4rem !important; }
+}
+/* Stats strip responsive */
+@media (max-width:639px) {
+  .stats-grid { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
+}
+/* Catalog grid responsive */
+@media (max-width:639px) {
+  .catalog-grid { grid-template-columns: 1fr !important; }
+}
+@media (min-width:640px) and (max-width:1023px) {
+  .catalog-grid { grid-template-columns: 1fr 1fr !important; }
+}
+/* Rental cards grid */
+@media (max-width:639px) {
+  .rental-cards-grid { grid-template-columns: 1fr !important; }
+}
+@media (min-width:640px) and (max-width:1023px) {
+  .rental-cards-grid { grid-template-columns: 1fr 1fr !important; }
+}
+/* Packages grid */
+@media (max-width:639px) {
+  .packages-grid { grid-template-columns: 1fr !important; }
+}
+@media (min-width:640px) and (max-width:1023px) {
+  .packages-grid { grid-template-columns: 1fr 1fr !important; }
+}
+/* How it works steps */
+@media (max-width:767px) {
+  .hiw-grid { grid-template-columns: 1fr !important; }
+}
+/* Occasions grid */
+@media (max-width:639px) {
+  .occasions-grid { grid-template-columns: 1fr 1fr !important; }
+}
+/* Quote form grid */
+@media (max-width:767px) {
+  .form-grid-2 { grid-template-columns: 1fr !important; }
+  .form-grid-3 { grid-template-columns: 1fr !important; }
+}
+/* Footer grid */
+@media (max-width:639px) {
+  .footer-grid { grid-template-columns: 1fr !important; }
+}
+/* Header right actions: hide Request a Quote text on xs */
+@media (max-width:479px) {
+  #header-quote-text { display:none; }
+  #header-quote-icon { display:inline !important; }
+}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-container": "#e5dedb", "on-error": "#ffffff", "secondary-fixed-dim": "#cbc5c2", "background": "#fbf9f6", "inverse-primary": "#e9c176", "on-tertiary-container": "#4f3704", "on-background": "#1b1c1a", "surface-tint": "#775a19", "tertiary-container": "#c4a065", "on-primary-fixed-variant": "#5d4201", "on-secondary-container": "#65625f", "secondary": "#615e5b", "tertiary-fixed": "#ffdeab", "primary-fixed-dim": "#e9c176", "primary-container": "#c5a059", "on-surface": "#1b1c1a", "on-primary-container": "#4e3700", "tertiary": "#765a25", "on-surface-variant": "#4e4639", "on-tertiary-fixed": "#271900", "primary": "#775a19", "surface-container-high": "#eae8e5", "surface-variant": "#e4e2df", "error": "#ba1a1a", "error-container": "#ffdad6", "on-primary": "#ffffff", "inverse-surface": "#30312f", "surface": "#fbf9f6", "on-secondary-fixed": "#1d1b19", "on-secondary-fixed-variant": "#494644", "secondary-fixed": "#e7e1de", "on-tertiary": "#ffffff", "inverse-on-surface": "#f2f0ed", "outline": "#7f7667", "surface-container": "#efeeeb", "surface-dim": "#dbdad7", "on-error-container": "#93000a", "surface-container-highest": "#e4e2df", "on-primary-fixed": "#261900", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#5c4210", "tertiary-fixed-dim": "#e7c183", "surface-bright": "#fbf9f6", "surface-container-lowest": "#ffffff", "primary-fixed": "#ffdea5", "surface-container-low": "#f5f3f0", "outline-variant": "#d1c5b4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1.5rem", "gutter": "2rem", "space-lg": "2.5rem", "margin": "4rem", "space-xs": "0.375rem", "gutter-mobile": "1rem", "margin-mobile": "1.5rem", "space-xl": "4rem", "space-sm": "0.75rem" }, "fontFamily": { "display-hero-mobile": ["Playfair Display"], "label-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "headline-sm": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "label-caps": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display-hero": ["Playfair Display"], "title-lg": ["Playfair Display"], "headline-md": ["Playfair Display"] }, "fontSize": { "display-hero-mobile": ["2.75rem", { "lineHeight": "3.25rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.03em", "fontWeight": "500" }], "headline-lg-mobile": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "0em", "fontWeight": "400" }], "body-sm": ["0.8125rem", { "lineHeight": "1.375rem", "letterSpacing": "0.02em", "fontWeight": "400" }], "headline-lg": ["3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.015em", "fontWeight": "400" }], "headline-sm": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "0em", "fontWeight": "500" }], "body-md": ["0.9375rem", { "lineHeight": "1.625rem", "letterSpacing": "0.015em", "fontWeight": "400" }], "label-caps": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.22em", "fontWeight": "600" }], "body-lg": ["1.125rem", { "lineHeight": "1.875rem", "letterSpacing": "0.01em", "fontWeight": "300" }], "display-hero": ["4.5rem", { "lineHeight": "5rem", "letterSpacing": "-0.02em", "fontWeight": "400" }], "title-lg": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "500" }] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(43,38,35,0.04)]"><div class="w-full bg-inverse-surface text-inverse-on-surface py-1.5 px-gutter-mobile lg:px-gutter border-b border-on-surface-variant/20 text-body-sm overflow-hidden"><div class="max-w-7xl mx-auto flex items-center justify-between gap-2 font-label-caps text-[11px] uppercase tracking-wider min-w-0"><div class="flex items-center gap-6"><a class="hover:text-primary-fixed transition-colors flex items-center gap-1.5" data-path="how-it-works" href="#how-it-works"><span class="">How It Works</span></a><span class="opacity-40 hidden sm:inline">â€¢</span><span class="hidden sm:flex items-center gap-1.5 text-secondary-fixed-dim"><span class="material-symbols-outlined text-[14px] text-primary-fixed">verified</span><span class="">Pan-India Luxury Event Rentals</span></span></div><div class="flex items-center gap-4 text-secondary-fixed-dim"><a class="hover:text-primary-fixed transition-colors flex items-center gap-1.5" href="tel:+919820045678"><span class="material-symbols-outlined text-[14px] text-primary-fixed">call</span><span class="normal-case tracking-normal hidden sm:inline" id="topbar-phone-text">+91 98200 45678 / 45679</span><span class="normal-case tracking-normal sm:hidden" id="topbar-phone-short">+91 98200</span></a><span class="opacity-40">â€¢</span><a class="hover:text-primary-fixed transition-colors flex items-center gap-1.5" href="https://wa.me/919820045679" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[14px] text-[#25D366]">chat</span><span class="hidden sm:inline" id="topbar-wa-text">WhatsApp</span></a><span class="opacity-40">â€¢</span><button aria-label="Toggle Dark or Light Mode" class="hover:text-primary-fixed text-inverse-on-surface flex items-center justify-center transition-colors cursor-pointer" id="theme-toggle" onclick="toggleDarkMode()"><span class="material-symbols-outlined text-[16px] dark:hidden block" id="theme-icon-light">dark_mode</span><span class="material-symbols-outlined text-[16px] hidden text-primary-fixed" id="theme-icon-dark">light_mode</span></button></div></div></div><div class="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter h-20 flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm shrink-0"><img alt="Virasat Royale Luxury Rentals Logo" class="h-8 w-auto object-contain" src="images/logo.jpg"><a class="flex flex-col text-left group" data-path="home" href="#"><span class="font-title-lg text-title-lg tracking-tight text-on-surface group-hover:text-primary transition-colors">VIRASAT <span class="font-normal italic text-primary">Royale</span></span><span class="font-label-caps text-label-caps uppercase text-secondary">Haute Event Rentals</span></a></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="text-primary font-semibold"><a aria-current="page" class="transition-colors py-2 text-primary font-semibold" data-path="home" href="#">Home</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="about" href="#">About</a><!-- Rentals Mega Menu --><div class="relative group py-2"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors inline-flex items-center gap-1 cursor-pointer" data-path="rentals" href="#rentals-catalog"><span class="">Rentals</span><span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180">expand_more</span></a><div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 absolute top-full -left-36 w-[860px] bg-surface-container-lowest p-6 shadow-[0_20px_50px_rgba(0,0,0,0.18)] border border-surface-container z-50 rounded-b-lg"><div class="grid grid-cols-12 gap-6"><div class="col-span-8 grid grid-cols-2 gap-3 border-r border-surface-container pr-6"><div class="col-span-2 pb-2 border-b border-surface-container flex items-center justify-between"><span class="font-label-caps text-label-caps uppercase text-primary tracking-widest">Curated Heirloom Inventory</span><span class="font-body-sm text-xs text-secondary">11 Specialized Categories</span></div><a class="flex items-center gap-3 p-2 hover:bg-surface-container-low rounded transition-colors group/item" href="#rentals-catalog"><div class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors shrink-0"><span class="material-symbols-outlined text-[18px]">chair</span></div><div><span class="font-label-md text-label-md font-medium text-on-surface block">Tables &amp; Chairs</span><span class="font-body-sm text-body-sm text-secondary">Chiavari, Velvet &amp; Mirror Banquets</span></div></a><a class="flex items-center gap-3 p-2 hover:bg-surface-container-low rounded transition-colors group/item" href="#rentals-catalog"><div class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors shrink-0"><span class="material-symbols-outlined text-[18px]">weekend</span></div><div><span class="font-label-md text-label-md font-medium text-on-surface block">Royal Seating</span><span class="font-body-sm text-body-sm text-secondary">Maharani Sofas &amp; Diwans</span></div></a><a class="flex items-center gap-3 p-2 hover:bg-surface-container-low rounded transition-colors group/item" href="#rentals-catalog"><div class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors shrink-0"><span class="material-symbols-outlined text-[18px]">temple_hindu</span></div><div><span class="font-label-md text-label-md font-medium text-on-surface block">Mandap &amp; Stages</span><span class="font-body-sm text-body-sm text-secondary">Handcrafted Carved Sanctums</span></div></a><a class="flex items-center gap-3 p-2 hover:bg-surface-container-low rounded transition-colors group/item" href="#rentals-catalog"><div class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors shrink-0"><span class="material-symbols-outlined text-[18px]">light</span></div><div><span class="font-label-md text-label-md font-medium text-on-surface block">Lighting &amp; Chandeliers</span><span class="font-body-sm text-body-sm text-secondary">Belgian Crystal &amp; Fairy Canopies</span></div></a><a class="flex items-center gap-3 p-2 hover:bg-surface-container-low rounded transition-colors group/item" href="#rentals-catalog"><div class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors shrink-0"><span class="material-symbols-outlined text-[18px]">restaurant</span></div><div><span class="font-label-md text-label-md font-medium text-on-surface block">Tableware &amp; Glass</span><span class="font-body-sm text-body-sm text-secondary">24K Gold Rim Bone China</span></div></a><a class="flex items-center gap-3 p-2 hover:bg-surface-container-low rounded transition-colors group/item" href="#rentals-catalog"><div class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-on-primary transition-colors shrink-0"><span class="material-symbols-outlined text-[18px]">cabin</span></div><div><span class="font-label-md text-label-md font-medium text-on-surface block">Tents &amp; Canopies</span><span class="font-body-sm text-body-sm text-secondary">German Clear-Span Hangars</span></div></a></div><div class="col-span-4 flex flex-col justify-between bg-surface-container-low p-4 rounded"><div class="relative aspect-[4/3] overflow-hidden rounded mb-3"><img alt="2026 Lookbook Preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAracoXWkhRyST8mw1IBneNkC4aPf1U9yX73AbDD2aMrMqRjQDyz-P0rfNiq_7PGPxj5g3Mqkch_7scdghGjNngdtw77n43kOs12I_sF63Bu3LdpbdL0rFl27dn3skkC0Mz_nwy0QPq4X2u9IMOapJ17coMz-CEGdnxHQqOXJffrTBfJYyY64neUFG5256HEOBtdJCn0TXzoLbyOuNSQt8Sb3Mpkkv0YJACAvJtyLHJjL3LdVSeF2UEcA"><span class="absolute top-2 left-2 px-2 py-0.5 bg-inverse-surface/80 text-inverse-on-surface text-[10px] font-label-caps uppercase">2026 Lookbook</span></div><div><h4 class="font-title-lg text-title-lg text-on-surface font-semibold mb-1">The Imperial Edition</h4><p class="font-body-sm text-body-sm text-secondary mb-3">Explore 1,000+ couture fixtures tailored for grand palaces.</p><a class="font-label-caps text-label-caps uppercase text-primary hover:text-on-surface inline-flex items-center gap-1 font-semibold" href="#rentals-catalog"><span class="">View All Rentals</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a></div></div></div></div></div><!-- Packages Mega Menu --><div class="relative group py-2"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors inline-flex items-center gap-1 cursor-pointer" data-path="packages" href="#packages"><span class="">Packages</span><span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180">expand_more</span></a><div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 absolute top-full -left-20 w-[640px] bg-surface-container-lowest p-6 shadow-[0_20px_50px_rgba(0,0,0,0.18)] border border-surface-container z-50 rounded-b-lg"><div class="grid grid-cols-3 gap-4"><a class="p-4 bg-surface-container-low hover:bg-surface-container rounded transition-all flex flex-col justify-between group/pkg" href="#packages"><span class="font-label-caps text-[10px] uppercase text-secondary tracking-wider block mb-1">Intimate Scale</span><h4 class="font-title-lg text-[15px] font-semibold text-on-surface mb-2 group-hover/pkg:text-primary transition-colors">Essential SoirÃ©e</h4><p class="font-body-sm text-xs text-secondary mb-3">Up to 150 guests with seating, tables &amp; ambient lighting.</p><span class="font-label-caps text-xs text-primary font-semibold">From â‚¹85,000</span></a><a class="p-4 bg-surface-container-low hover:bg-surface-container rounded transition-all flex flex-col justify-between border border-primary-container relative group/pkg" href="#packages"><span class="font-label-caps text-[10px] uppercase text-primary font-bold tracking-wider block mb-1">Most Popular</span><h4 class="font-title-lg text-[15px] font-semibold text-on-surface mb-2 group-hover/pkg:text-primary transition-colors">Grand Sangeet</h4><p class="font-body-sm text-xs text-secondary mb-3">300-600 guests with complete mandap, stage &amp; JBL rig.</p><span class="font-label-caps text-xs text-primary font-semibold">From â‚¹2,40,000</span></a><a class="p-4 bg-surface-container-low hover:bg-surface-container rounded transition-all flex flex-col justify-between group/pkg" href="#packages"><span class="font-label-caps text-[10px] uppercase text-secondary tracking-wider block mb-1">Destination</span><h4 class="font-title-lg text-[15px] font-semibold text-on-surface mb-2 group-hover/pkg:text-primary transition-colors">Royal Heritage</h4><p class="font-body-sm text-xs text-secondary mb-3">Multi-day palace event with A/C hangars &amp; fine bone china.</p><span class="font-label-caps text-xs text-primary font-semibold">From â‚¹5,50,000</span></a></div><div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between"><span class="font-body-sm text-xs text-secondary">Need custom equipment counts?</span><a class="font-label-caps text-label-caps uppercase text-primary hover:underline font-semibold flex items-center gap-1" href="#quote-enquiry"><span class="">Build Custom Package</span><span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div></div></div><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="gallery" href="#gallery">Gallery</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="faq" href="#faq">FAQ</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="contact" href="#quote-enquiry">Contact</a></nav><button aria-label="Open mobile menu" class="xl:hidden flex items-center justify-center w-9 h-9 rounded bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors ml-2" id="hamburger-btn" onclick="toggleMobileMenu()"><span class="material-symbols-outlined text-[22px]" id="hamburger-icon">menu</span></button><div class="flex items-center gap-space-xs shrink-0"><a class="inline-flex items-center gap-2 bg-surface-container-low hover:bg-surface-container text-on-surface px-3.5 py-2 text-label-caps font-label-caps uppercase tracking-wider transition-all" data-path="quote-cart" href="#"><span class="material-symbols-outlined text-[16px] text-primary">shopping_bag</span><span class="hidden sm:inline">Quote Cart</span><span class="px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-caps text-[10px] leading-tight">0</span></a><a class="inline-flex items-center gap-1.5 bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-3 sm:px-4 py-2 text-label-caps font-label-caps uppercase tracking-wider shadow-sm transition-all" href="#quote-enquiry"><span class="hidden sm:inline" id="header-quote-text">Request a Quote</span><span class="sm:hidden font-label-caps text-[11px] tracking-wider">Quote</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a><div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface"><span class="material-symbols-outlined text-[18px]">person</span></div></div></div><!-- MOBILE MENU OVERLAY -->
+<div class="fixed inset-0 bg-inverse-surface/50 z-[60] backdrop-blur-sm xl:hidden" id="menu-overlay" onclick="toggleMobileMenu()"></div>
+<!-- MOBILE MENU DRAWER -->
+<div class="fixed top-0 right-0 h-full w-[85vw] max-w-sm bg-surface z-[70] xl:hidden flex flex-col shadow-[0_0_40px_rgba(0,0,0,0.2)] overflow-y-auto" id="mobile-menu">
+  <!-- Drawer Header -->
+  <div class="flex items-center justify-between px-5 py-4 border-b border-surface-container">
+    <div class="flex items-center gap-2">
+      <img alt="Virasat Royale Logo" class="h-7 w-auto object-contain" src="images/logo.jpg">
+      <span class="font-title-lg text-[15px] tracking-tight text-on-surface">VIRASAT <span class="italic text-primary">Royale</span></span>
+    </div>
+    <button aria-label="Close menu" class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" onclick="toggleMobileMenu()">
+      <span class="material-symbols-outlined text-[20px]">close</span>
+    </button>
+  </div>
+  <!-- Drawer Links -->
+  <nav class="flex flex-col px-4 py-3 gap-1 flex-1">
+    <a class="flex items-center gap-3 px-3 py-3 rounded text-primary font-semibold font-label-md text-label-md hover:bg-surface-container transition-colors" href="#" onclick="toggleMobileMenu()">
+      <span class="material-symbols-outlined text-[18px]">home</span>Home
+    </a>
+    <a class="flex items-center gap-3 px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" href="#" onclick="toggleMobileMenu()">
+      <span class="material-symbols-outlined text-[18px]">info</span>About
+    </a>
+    <!-- Rentals Accordion -->
+    <div class="mobile-acc">
+      <button class="w-full flex items-center justify-between px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors mobile-acc-toggle" onclick="this.closest('.mobile-acc').classList.toggle('mobile-acc-open')">
+        <span class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px] text-primary">chair</span>Rentals</span>
+        <span class="material-symbols-outlined text-[18px] mobile-acc-icon">expand_more</span>
+      </button>
+      <div class="mobile-acc-content pl-9 flex flex-col gap-1 pb-1">
+        <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors" href="#rentals-catalog" onclick="toggleMobileMenu()">Tables &amp; Chairs</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors" href="#rentals-catalog" onclick="toggleMobileMenu()">Royal Seating</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors" href="#rentals-catalog" onclick="toggleMobileMenu()">Mandap &amp; Stages</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors" href="#rentals-catalog" onclick="toggleMobileMenu()">Lighting &amp; Chandeliers</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors" href="#rentals-catalog" onclick="toggleMobileMenu()">Tableware &amp; Glass</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors" href="#rentals-catalog" onclick="toggleMobileMenu()">Tents &amp; Canopies</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors" href="#rentals-catalog" onclick="toggleMobileMenu()">DJ &amp; Acoustic Truss</a>
+      </div>
+    </div>
+    <!-- Packages Accordion -->
+    <div class="mobile-acc">
+      <button class="w-full flex items-center justify-between px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" onclick="this.closest('.mobile-acc').classList.toggle('mobile-acc-open')">
+        <span class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px] text-primary">inventory_2</span>Packages</span>
+        <span class="material-symbols-outlined text-[18px] mobile-acc-icon">expand_more</span>
+      </button>
+      <div class="mobile-acc-content pl-9 flex flex-col gap-1 pb-1">
+        <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors" href="#packages" onclick="toggleMobileMenu()">Essential Soirée — from ₹85,000</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors" href="#packages" onclick="toggleMobileMenu()">Grand Sangeet — from ₹2,40,000</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors" href="#packages" onclick="toggleMobileMenu()">Royal Heritage — from ₹5,50,000</a>
+      </div>
+    </div>
+    <a class="flex items-center gap-3 px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" href="#gallery" onclick="toggleMobileMenu()">
+      <span class="material-symbols-outlined text-[18px]">photo_library</span>Gallery
+    </a>
+    <a class="flex items-center gap-3 px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" href="#faq" onclick="toggleMobileMenu()">
+      <span class="material-symbols-outlined text-[18px]">help_outline</span>FAQ
+    </a>
+    <a class="flex items-center gap-3 px-3 py-3 rounded text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" href="#quote-enquiry" onclick="toggleMobileMenu()">
+      <span class="material-symbols-outlined text-[18px]">mail</span>Contact
+    </a>
+  </nav>
+  <!-- Drawer Footer CTAs -->
+  <div class="px-4 py-4 border-t border-surface-container flex flex-col gap-3">
+    <a class="flex items-center justify-center gap-2 bg-primary text-on-primary px-4 py-3 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-all" href="#quote-enquiry" onclick="toggleMobileMenu()">
+      <span>Request a Quote</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+    </a>
+    <a class="flex items-center justify-center gap-2 bg-[#25D366]/10 text-[#25D366] px-4 py-3 font-label-md text-label-md hover:bg-[#25D366]/20 transition-all" href="https://wa.me/919820045679" rel="noopener" target="_blank">
+      <span class="material-symbols-outlined text-[18px]">chat</span><span>WhatsApp Concierge</span>
+    </a>
+  </div>
+</div></header><main class="w-full pt-20 bg-background overflow-x-hidden"><div class="flex flex-col w-full">
+<!-- 1. HERO SECTION (Immersive Architectural Splendor) -->
+<section class="relative w-full min-h-[600px] md:min-h-[780px] lg:min-h-[942px] flex items-center justify-center overflow-hidden -mt-20 pt-24 bg-inverse-surface">
+<!-- Hero Background with Warm Scrim & Radial Vignette -->
+<div class="absolute inset-0 bg-cover bg-center opacity-40 transform scale-105 transition-transform duration-1000 ease-out" data-alt="Magnificent Indian luxury wedding ballroom banquet in a heritage palace courtyard at twilight, thousands of crystal chandeliers overhead glowing in warm amber light, handcrafted carved gold mandap arch with opulent tuberoses and cream roses, mirror reflection tables with gold banquet seating" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYubPCzDXv8AFZaXE0-joH47qlLHAzI-uIB4vOogp94MToKMfFXyGeFCR8bgsPm4D_xApOBSOPmx65UuIKm7npd0Xt4eqlBECc9vB6gehdvSRKS5qTOvcgY1_yuuxbb4wdpG6VKUi9UPd0XydTtyZjX0k8M8sL_TKBr_IKOIkZ1hXvpN-IfaLOxfs6VIciFFIAkC-YyK5ROO-uVq6tpFPdaMJwKFZxQoqOd-HRtMy27tAUha7srTjV_g')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-inverse-surface/85 via-inverse-surface/75 to-background"></div>
+<div class="absolute -top-40 right-10 w-96 h-96 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 max-w-6xl mx-auto px-gutter-mobile lg:px-gutter text-center flex flex-col items-center py-10 md:py-16">
+<!-- Regal Overline -->
+<div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-surface-container-lowest/10 backdrop-blur-md mb-8 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim animate-ping"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-[0.28em] text-primary-fixed-dim">Aura of Heritage &amp; Magnificence</span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-display-hero text-display-hero text-inverse-on-surface max-w-4xl tracking-tight mb-6 leading-tight hero-headline">
+        Everything You Need to Create an <span class="italic font-normal text-primary-fixed">Unforgettable</span> Event
+      </h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-secondary-fixed-dim max-w-2xl mx-auto mb-10 font-light hero-sub">
+        Premium wedding and haute event rentals meticulously curated to transform your royal celebration into an extraordinary, bespoke experience.
+      </p>
+<!-- Action Group -->
+<div class="flex flex-wrap items-center justify-center gap-4 mb-14 w-full max-w-xl hero-cta-group">
+<a class="px-8 py-4 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest shadow-xl hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2 group" href="#rentals-catalog">
+<span class="">Explore Rentals Collection</span>
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<a class="px-7 py-4 bg-transparent text-inverse-on-surface font-label-caps text-label-caps uppercase tracking-widest bg-surface-variant/10 hover:bg-surface-variant/25 transition-all duration-300" href="#quote-enquiry">
+          Request a Quote
+        </a>
+<a class="px-6 py-4 rounded-full bg-[#25D366]/20 text-[#25D366] hover:bg-[#25D366]/30 font-label-md text-label-md flex items-center gap-2 transition-all" href="https://wa.me/919820045679" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span class="">WhatsApp Concierge</span>
+</a>
+</div>
+<!-- Trust Badges Strip -->
+<div class="pt-8 flex flex-wrap items-center justify-center gap-y-3 gap-x-8 text-secondary-fixed-dim font-label-caps text-[11px] uppercase tracking-widest hero-trust-strip">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>Royal Weddings</span>
+<span class="opacity-40">â€¢</span>
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>Corporate Galas</span>
+<span class="opacity-40">â€¢</span>
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>Royal Sangeet</span>
+<span class="opacity-40">â€¢</span>
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>Destination Celebrations</span>
+<span class="opacity-40">â€¢</span>
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>24/7 Logistics Rigging</span>
+</div>
+<!-- Scroll cue -->
+<a class="mt-14 inline-flex flex-col items-center gap-1.5 text-secondary-fixed-dim hover:text-primary-fixed transition-colors font-label-caps text-label-caps tracking-widest" href="#stats-strip">
+<span class="">Discover The Collection</span>
+<span class="material-symbols-outlined text-[18px] animate-bounce">arrow_downward</span>
+</a>
+</div>
+</section>
+<!-- 2. TRUST / STATISTICS STRIP (Pristine Ivory Plinth) -->
+<section class="w-full max-w-7xl mx-auto px-gutter-mobile lg:px-gutter mt-4 md:-mt-10 relative z-20" id="stats-strip">
+<div class="bg-surface-container-lowest shadow-[0_16px_36px_rgba(43,38,35,0.06)] p-5 sm:p-8 lg:p-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 divide-y md:divide-y-0 md:divide-x divide-surface-container stats-grid">
+<div class="flex flex-col items-center text-center pt-4 md:pt-0">
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight font-light">500+</span>
+<span class="font-title-lg text-title-lg text-on-surface mt-1 font-semibold">Grand Events</span>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Palace Weddings &amp; Iconic Galas</span>
+</div>
+<div class="flex flex-col items-center text-center pt-4 md:pt-0 md:pl-8">
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight font-light">1,000+</span>
+<span class="font-title-lg text-title-lg text-on-surface mt-1 font-semibold">Rental SKUs</span>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Bespoke Furniture, Mandaps &amp; Lighting</span>
+</div>
+<div class="flex flex-col items-center text-center pt-4 md:pt-0 md:pl-8">
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight font-light">100+</span>
+<span class="font-title-lg text-title-lg text-on-surface mt-1 font-semibold">Elite Planners</span>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Trusted by Leading Wedding Couturiers</span>
+</div>
+<div class="flex flex-col items-center text-center pt-4 md:pt-0 md:pl-8">
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight font-light">10+</span>
+<span class="font-title-lg text-title-lg text-on-surface mt-1 font-semibold">Years of Legacy</span>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Flawless Pan-India Event Production</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SHOP BY CATEGORY (11 Rich Heirloom Categories) -->
+<section class="w-full max-w-7xl mx-auto px-gutter-mobile lg:px-gutter py-24">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">Curated Department Catalog</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Explore Our Rental Collection</h2>
+<p class="font-body-md text-body-md text-secondary mt-2 font-light">Everything you need to create a magnificent, memorable, and harmoniously coordinated royal event.</p>
+</div>
+<a class="font-label-caps text-label-caps uppercase text-primary hover:text-on-surface tracking-widest inline-flex items-center gap-2 group transition-colors" href="#rentals-catalog">
+<span class="">View Complete Index</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- 11 Category Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- 1. Tables & Chairs -->
+<div class="group bg-surface-container-lowest p-5 flex flex-col justify-between hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="aspect-[4/3] w-full overflow-hidden mb-5 relative bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Luxury gold chiavari chairs and mirrored round dining tables decorated with tall crystal candelabras and white orchids for an opulent Indian wedding banquet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAracoXWkhRyST8mw1IBneNkC4aPf1U9yX73AbDD2aMrMqRjQDyz-P0rfNiq_7PGPxj5g3Mqkch_7scdghGjNngdtw77n43kOs12I_sF63Bu3LdpbdL0rFl27dn3skkC0Mz_nwy0QPq4X2u9IMOapJ17coMz-CEGdnxHQqOXJffrTBfJYyY64neUFG5256HEOBtdJCn0TXzoLbyOuNSQt8Sb3Mpkkv0YJACAvJtyLHJjL3LdVSeF2UEcA">
+<span class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 font-label-caps text-[10px] uppercase text-primary tracking-wider">180+ Styles</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Tables &amp; Chairs</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Louis XVI, Gold Chiavari, Velvet Dining, Mirror Tables.</p>
+</div>
+<a class="mt-4 pt-3 font-label-caps text-label-caps uppercase text-primary flex items-center justify-between" href="#rentals-catalog">
+<span class="">Explore Collection</span>
+<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</a>
+</div>
+<!-- 2. Wedding Furniture -->
+<div class="group bg-surface-container-lowest p-5 flex flex-col justify-between hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="aspect-[4/3] w-full overflow-hidden mb-5 relative bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Regal handcrafted gold-leaf Maharaja sofa with plush emerald velvet upholstery and traditional embroidered silk bolster cushions on an elevated royal stage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1nLjrQJX_vdFETuGWXDLYlaoAmbAqz12hwU92xRZZz2yBrkY77wJVv5-mhwCxnhztrSdT62GhOa12_IQcNHl1bL6RhM5VP9VhpqCon7_2r9CfyuZrT5M9n5dI1XXYzU6Xgzj_tlt5kGrK2IYi-gJ7Lzih9QSo0uaSPnpNrUb2l77yBXtoyVIxmcNSr3-4YrD6WpT7-FpoNc1aYUHJTddjgd-ywAMBqh8SZcN7Qkb8ldpYLm7WLUh2Rw">
+<span class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 font-label-caps text-[10px] uppercase text-primary tracking-wider">Royal Seating</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Wedding Furniture</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Maharaja Sofas, Royal Diwans, Bride &amp; Groom Thrones.</p>
+</div>
+<a class="mt-4 pt-3 font-label-caps text-label-caps uppercase text-primary flex items-center justify-between" href="#rentals-catalog">
+<span class="">Explore Collection</span>
+<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</a>
+</div>
+<!-- 3. Mandap & Stage -->
+<div class="group bg-surface-container-lowest p-5 flex flex-col justify-between hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="aspect-[4/3] w-full overflow-hidden mb-5 relative bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Handcrafted carved Indian wedding mandap with four grand pillars cascading in fresh jasmine, suspended crystal chandeliers and mirror reflection walkway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBziWX8LB3rFCY727ymJd60PgJJ4-1ZfF852WoprhgcOOjG5S-BErocu2Vc90-70VRsOC2yH1E64Cgy2fV4tkzZu5aovn0nVdUSkIyRxGnsGsrYmXOrbA4je03DNvVP85hzVkv-RTBcxzPa8GCP9IQVITTfyEWxeC29_3p1sCQzeGg-9wRWvnZifmWmVW7AIVakXI_rIhxee0w69LKUpvIM5nskaDu0pFSNg0qHL0ShRlERDLnnDmmQrA">
+<span class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 font-label-caps text-[10px] uppercase text-primary tracking-wider">Heirloom Arch</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Mandap &amp; Stages</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Carved Floral Mandaps, Crystal Arch Stages, Mirror Ramps.</p>
+</div>
+<a class="mt-4 pt-3 font-label-caps text-label-caps uppercase text-primary flex items-center justify-between" href="#rentals-catalog">
+<span class="">Explore Collection</span>
+<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</a>
+</div>
+<!-- 4. Decoration Suites -->
+<div class="group bg-surface-container-lowest p-5 flex flex-col justify-between hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="aspect-[4/3] w-full overflow-hidden mb-5 relative bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Antique brass floral urns overflowing with marigolds and white roses, paired with royal lattice jali screens and golden candle wall backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ_uBQJOngPvOeFShHZecffSFCdhJ2wXXGDJC0-BqszUaPJm7_pMe87JfkzI8fR6imMld939_bwsAzrGmpCzm5Ln2CEzYw0YAoRbpPVyG7u_gOG4j53llrs0_hsU9Vo5dyPWzGyYo1vrKRr81VGsw-P1gocNMeZfzgrI5SnN0BUQIgyJB2bZbl7RXbOJyRa-eOzfWl_Aa0N7B8Z1Zsu4Jj59ItkUab_OTllbZ9Mt72t47Q-CKKnYLCYA">
+<span class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 font-label-caps text-[10px] uppercase text-primary tracking-wider">Accent Decor</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Decoration Suites</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Floral Urns, Antique Candelabras, Royal Drapes &amp; Candle Walls.</p>
+</div>
+<a class="mt-4 pt-3 font-label-caps text-label-caps uppercase text-primary flex items-center justify-between" href="#rentals-catalog">
+<span class="">Explore Collection</span>
+<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</a>
+</div>
+<!-- 5. Lighting & Chandeliers -->
+<div class="group bg-surface-container-lowest p-5 flex flex-col justify-between hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="aspect-[4/3] w-full overflow-hidden mb-5 relative bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Massive European multi-tier crystal chandeliers suspended in an Indian wedding marquee with fairy light ceiling canopy and warm brass floor uplighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8jQqC9-OsIL3mhsBK7ekqZZlp-c8nukoEObtWudQnwd6BOmRgtpbaL7TOev2jLpiCSDcl_lyXDrZaOXg_pmFC6_2nBH1QR61QN0hM4qbNwQcoJmSm9wGkehwTxbrbEty6fK3CtKbexceRrnmEBNqzhm5XPGqmA__0BakEED_FtEjxm_ELIG3_x8b4x4qjD6s1lrubfhGnUXB2btnVP6XujAtY3kLWIROcBsZO6iGv_vgxHeSEhPjX-w">
+<span class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 font-label-caps text-[10px] uppercase text-primary tracking-wider">Atmospheric</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Lighting &amp; Rigging</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Belgian Crystal Chandeliers, Fairy Canopies, Uplighting.</p>
+</div>
+<a class="mt-4 pt-3 font-label-caps text-label-caps uppercase text-primary flex items-center justify-between" href="#rentals-catalog">
+<span class="">Explore Collection</span>
+<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</a>
+</div>
+<!-- 6. Catering Equipment -->
+<div class="group bg-surface-container-lowest p-5 flex flex-col justify-between hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="aspect-[4/3] w-full overflow-hidden mb-5 relative bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Fine silver hammered chafing dishes and royal hammered copper warmers lined on a velvet draped buffet counter at a five-star destination wedding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXKEPFQIhoCC9dGbN_DcVc3P6u81xYaWkqhq8mWkzNzFxiJ2Kf_v13GxnIMyLqW5E3ecRRr-4S2Y10EHTkLPYD02Lpx6L18tjaFeEFHj_rQvzOA_JzYS6z25WxqZiA6XBZT7NcSfodeToeYM88Vl2WrDv8kvkiTHwEOQ3Olez3znJ1Knn3no5B5KSLPKVBuzQHcWr9IrWp71f9TkL_A_iWMYAPBV45kOu-KL614-oiBedPoVnyt1Ti6g">
+<span class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 font-label-caps text-[10px] uppercase text-primary tracking-wider">Catering Fleet</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Catering Equipment</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Silver Chafing Dishes, Hammered Copper Warmers, Live Stalls.</p>
+</div>
+<a class="mt-4 pt-3 font-label-caps text-label-caps uppercase text-primary flex items-center justify-between" href="#rentals-catalog">
+<span class="">Explore Collection</span>
+<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</a>
+</div>
+<!-- 7. Sound & DJ Systems -->
+<div class="group bg-surface-container-lowest p-5 flex flex-col justify-between hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="aspect-[4/3] w-full overflow-hidden mb-5 relative bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Professional concert acoustic line array audio rig and Pioneer DJ console with sleek black trussing for an upscale luxury Sangeet afterparty" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsIkDggzZpeIMuRHRj-i4xDwCdlaBBT80t68SuqtKNlwuXpbbp3s4wGg3IfwgW12zuuPJiz6_Ui2E_SpukAiFZNpoujNzQjk1l2kU5Ji0NJ0uqxau3fjWaim1xRqegA2BJGbu-GbwE07awbPbRYBlzY3xv77DTV4TzMbRxuO2LcH7gdZpCFwCbAzhJSPN2Dva47SQYQHl53K9odBzMw4KNUVTmKLeF_oYvtScZYG5YSKURcVRCDcUk6w">
+<span class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 font-label-caps text-[10px] uppercase text-primary tracking-wider">Acoustics</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Sound &amp; DJ Rigging</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">JBL Line Array Systems, Pioneer DJ Consoles, Heavy Trussing.</p>
+</div>
+<a class="mt-4 pt-3 font-label-caps text-label-caps uppercase text-primary flex items-center justify-between" href="#rentals-catalog">
+<span class="">Explore Collection</span>
+<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</a>
+</div>
+<!-- 8. Tents & Canopies -->
+<div class="group bg-surface-container-lowest p-5 flex flex-col justify-between hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="aspect-[4/3] w-full overflow-hidden mb-5 relative bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Grand German hanger transparent air-conditioned event marquee tent illuminated under the evening stars on a sprawling royal palace lawn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm3QAf8u2-_jtKtbkrzTqLfRrVtmj1f0UVw34t9hPWUHbYvbZdhekuq28i75cphzGTuQmKPZBi_38rPV3wdLb_NaSh3nIGmxZ8xQlM4Bs9HZlgImlLtZQ4SH8sKB_XolC3Pszb1sck0yjEkre7mt3Q0UgMHFjVRxQG_Nj3ev11khuSbIl6ZuIFW16YaEfvAb55ZvkKwHDEfCpDDYGq7q-8P6bLJypJhd4nxnGvEBF15XFWQ2lTllSzEQ">
+<span class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 font-label-caps text-[10px] uppercase text-primary tracking-wider">Hangers &amp; Tents</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Tents &amp; Canopies</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">German Hangers, Mogul Shamianas, Pagoda Structures.</p>
+</div>
+<a class="mt-4 pt-3 font-label-caps text-label-caps uppercase text-primary flex items-center justify-between" href="#rentals-catalog">
+<span class="">Explore Collection</span>
+<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</a>
+</div>
+<!-- 9. Tableware & Crystal -->
+<div class="group bg-surface-container-lowest p-5 flex flex-col justify-between hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="aspect-[4/3] w-full overflow-hidden mb-5 relative bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Fine bone china dining plate with 24k gold filigree rim, cut crystal wine goblets and brushed gold royal flatware cutlery setting on linen cloth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArbkXudGXnsdNMDdoK41wMVE6uLXBPt41E5TIRCTT0P3FMKCfFK6lG3WmCBlbBqNKBfUYRcjkD8y3F5u57Y4iHl2BjOGc03KcYy5_NmvB8MTgHGoo9yobPUrOrBshRUCPx_iExfJLg5OusAQFfMLpEDriEQCy7PvFtAfm9TSBTdWka5qx75JrlN4R6XcXMpO13bN30_AJr-Annvbamk1p75XJWPfv-hMGLSTPXBo8bNCr15AP5j3CAMg">
+<span class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 font-label-caps text-[10px] uppercase text-primary tracking-wider">Haute Dining</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Tableware &amp; Glass</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">24k Gold Rim Bone China, Crystal Stemware, Royal Cutlery.</p>
+</div>
+<a class="mt-4 pt-3 font-label-caps text-label-caps uppercase text-primary flex items-center justify-between" href="#rentals-catalog">
+<span class="">Explore Collection</span>
+<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</a>
+</div>
+<!-- 10. Props & Accessories -->
+<div class="group bg-surface-container-lowest p-5 flex flex-col justify-between hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+<div class="aspect-[4/3] w-full overflow-hidden mb-5 relative bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Ornate hand-carved vintage golden royal bridal palanquin doli with velvet cushions and traditional brass urulis filled with floating lotus flowers and tea lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7yaViBjob_EMHN_UaHXSRr-rUqLo1URel6J3BFCB2p9Iy1gFDYwm0ICfQVP0Npf7NI0TKnb4hboWBcrGwO3OdqCF-GcXqzWbtn75JtI9SOfCuJQ_dXu9PcPDX-l3_YfgJqh7bq6UMukX3z7QmoN9TUsAmyJh9iz3VjghUiUsuS5czG-1saTuxvfZFxUe9IKrDhGzsrGmY_beuT9PIHCUY6wRJrQSoChhe6rZCVFgcd5jyewiY8LNy8Q">
+<span class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 font-label-caps text-[10px] uppercase text-primary tracking-wider">Heritage Props</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Props &amp; Accessories</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Vintage Royal Palanquins/Doli, Brass Urulis, Photo Sets.</p>
+</div>
+<a class="mt-4 pt-3 font-label-caps text-label-caps uppercase text-primary flex items-center justify-between" href="#rentals-catalog">
+<span class="">Explore Collection</span>
+<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</a>
+</div>
+<!-- 11. Event Equipment -->
+<div class="group bg-surface-container-lowest p-5 flex flex-col justify-between hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 sm:col-span-2 xl:col-span-2">
+<div class="aspect-[8/3] w-full overflow-hidden mb-5 relative bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Heavy-duty silent acoustic generator sets and commercial high-capacity misting outdoor cooling towers neatly deployed behind luxury event venue facade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDrbf48rfJIZMnB0VfDZGmrrnBltEyNssRetEkLjSN9akQVRwXstv3FVjHK-rcquGK_ZAu0kkH2ki4OhlWVi7ALtmOQEf82ByqyZAVF_SZTOWJeJ7kvz45mAxqBn-R7y62-l-Ig61aBdA9bPeE3xG6OItAQIRT_doc1yDDxI6vUaG_71IIib3s0WMycOzeG_HMxIm1s2K-1FyZsEkZu90UOFtp8TfQ6MB6QlggvDNDhKqLykz3KqgAcg">
+<span class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 font-label-caps text-[10px] uppercase text-primary tracking-wider">Mission Critical</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Event Infrastructure &amp; Climate Control</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Silent Diesel Generators (125 kVA - 500 kVA), Commercial Mist Coolers, Patio Heaters &amp; Cable Bridges.</p>
+</div>
+<a class="mt-4 pt-3 font-label-caps text-label-caps uppercase text-primary flex items-center justify-between" href="#rentals-catalog">
+<span class="">Explore Collection</span>
+<span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 4. FEATURED RENTALS CATALOG (Interactive "Add to Quote" Showcase) -->
+<section class="w-full bg-surface-container-low py-24 relative" id="rentals-catalog">
+<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">Ready for Custom Quotation</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Our Most Loved Rentals</h2>
+<p class="font-body-md text-body-md text-secondary mt-2 font-light">Handcrafted pieces and marquee fixtures ready to assemble into your custom quotation draft.</p>
+</div>
+<!-- Filter Pills (Tabs) -->
+<div class="flex flex-wrap items-center gap-2" id="catalog-filters">
+<button class="px-4 py-2 bg-on-surface text-surface font-label-caps text-label-caps uppercase tracking-wider transition-all">All Items</button>
+<button class="px-4 py-2 bg-surface-container-lowest text-on-surface font-label-caps text-label-caps uppercase tracking-wider hover:bg-surface-container-high transition-all">Royal Seating</button>
+<button class="px-4 py-2 bg-surface-container-lowest text-on-surface font-label-caps text-label-caps uppercase tracking-wider hover:bg-surface-container-high transition-all">Mandaps &amp; Stages</button>
+<button class="px-4 py-2 bg-surface-container-lowest text-on-surface font-label-caps text-label-caps uppercase tracking-wider hover:bg-surface-container-high transition-all">Chandeliers</button>
+<button class="px-4 py-2 bg-surface-container-lowest text-on-surface font-label-caps text-label-caps uppercase tracking-wider hover:bg-surface-container-high transition-all">Tableware</button>
+</div>
+</div>
+<!-- Product Cards Grid (8 Items) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product 1 -->
+<div class="bg-surface-container-lowest flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Editorial portrait of Royal Banquet Empress Chair with white velvet cushion and hand-applied antique brass gold leaf carved backrest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-J6wBi-jr76KJay2Od8aYrvjMV4lfRfB3N_5Voosy34n9ejnBsaX1saSZ4UYEaOtzjamf4HTnRB8QIUFh4B7XIHql5Kje4hNl5NUp1-vywRCtWT0LOm0myQC1w17xpcrS_TxbYouRY0p-4qp2Z8XPi3_QnjkQLoLGDA5Qmn3ngecJ2IJYZSfECHMZmrje7FpYSo1KWTl_CRYKFDcHI3B1Lcq5De4qj0k9RTzIMxeYZxJQ3IDBhALGPg">
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 px-2.5 py-1 backdrop-blur-sm">
+<span class="font-label-caps text-[10px] uppercase text-primary font-semibold">In Stock â€¢ Delhi &amp; Mumbai</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-1">Seating Curation</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-medium">Empress Banquet Chair</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">White velvet upholstery, hand-applied brass foil with high-density ergonomic foam.</p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase block">Daily Rental</span>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">â‚¹450 <span class="font-body-sm text-xs font-sans text-secondary">/ day</span></span>
+</div>
+<button class="px-3.5 py-2 bg-surface-container hover:bg-primary hover:text-on-primary font-label-caps text-label-caps uppercase transition-colors flex items-center gap-1" onclick="addToQuote('Empress Banquet Chair', 'â‚¹450')">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span class="">Add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-surface-container-lowest flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Round mirror top luxury wedding dining table with gold polished bevelled edge reflecting crystal glasses, seating 10 guests" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw61i4kKGoSWDMiVYNOf-04nJp2ryaa6nzqRErOk9cLtc1ST5tiQx3xxSwykaOFFoVJogkbfggyxFOB4WJ97TngfUPiauk0HKmdB7V-Vu4wYkjdAlQ1K8PpD7TdOFHJieutTEjDtpLpsjFYIWZX1Pzph_YsnEnCJh-M1QfgZfqm9NqNAqU6N7r2jRiRv4xYkzRb42mwCD-n0a50AiGZWgxETEy5MrSdlkK44DVECxH2lwNnFEzkvYoww">
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 px-2.5 py-1 backdrop-blur-sm">
+<span class="font-label-caps text-[10px] uppercase text-primary font-semibold">Available â€¢ 80 Units</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-1">Banquet Tables</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-medium">Mirrored Round Banquet Table</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">6ft diameter, seats 10 guests. High-clarity toughened champagne mirror top.</p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase block">Daily Rental</span>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">â‚¹3,800 <span class="font-body-sm text-xs font-sans text-secondary">/ day</span></span>
+</div>
+<button class="px-3.5 py-2 bg-surface-container hover:bg-primary hover:text-on-primary font-label-caps text-label-caps uppercase transition-colors flex items-center gap-1" onclick="addToQuote('Mirrored Round Banquet Table', 'â‚¹3,800')">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span class="">Add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-surface-container-lowest flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Classic gold chiavari wedding chair with soft cream silk padded seat cushion, photographed on marble courtyard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD63DeHEl2AUaGthGUEEU_9oWd-KK4qExA0DBt8S1a6g35B5qlWkRWaqaRHYUaMJjxy318iwvSNXnVwTcxNzvAEXZstPbYYZNUu_jKQhNjW1al-AtkdzjF80cSNqFSvxBbNQpZdfIWrP5rYd-N3WGb7P90KLsNEcB3dGgHWEqN-Dyg3GUAPAr3kK3DZ5AhjdaZv26FsBMU4w4iErMxoLtM34aYVsu8gkyXwAV0hbe9V8j9iV9QxvTyr5Q">
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 px-2.5 py-1 backdrop-blur-sm">
+<span class="font-label-caps text-[10px] uppercase text-primary font-semibold">1,200+ in Fleet</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-1">Chiavari Suites</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-medium">Sovereign Gold Chiavari</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">Solid beechwood frame in champagne gold with premium ivory silk tie pad.</p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase block">Daily Rental</span>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">â‚¹220 <span class="font-body-sm text-xs font-sans text-secondary">/ day</span></span>
+</div>
+<button class="px-3.5 py-2 bg-surface-container hover:bg-primary hover:text-on-primary font-label-caps text-label-caps uppercase transition-colors flex items-center gap-1" onclick="addToQuote('Sovereign Gold Chiavari', 'â‚¹220')">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span class="">Add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="bg-surface-container-lowest flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Magnificent hand-carved royal Maharani sofa in deep emerald velvet with ornate 24k gold leaf details on solid Burma teakwood frame" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOy2qJ_km_uVJDB6qpu1frDUBC40IEFcJyUQiplF-9xYq3om9a9jGHHwM_cM88viivcugwZYp0NTVpHq_rjI4cNVz7hh_7dIaMz-sy0hxhVCGK_rCSLFt35l1JaPFz_IMxOV6JicSEm2aCwKc7SReMR9oPGrE5AE0CkSpYFRF3WO2ATaCcYIe5T-UPzKv4TC3UNK9K3uqdPFjWLWV8TIDyuUMRfSh3Bhb9AwzxTIEpqpCSNNUZg2ebQw">
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 px-2.5 py-1 backdrop-blur-sm">
+<span class="font-label-caps text-[10px] uppercase text-primary font-semibold">Bridal Marquee</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-1">Stage Furniture</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-medium">Maharani Emerald Sofa</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">Teakwood frame hand-gilded in 24k gold leaf with deep emerald royal velvet.</p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase block">Daily Rental</span>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">â‚¹12,500 <span class="font-body-sm text-xs font-sans text-secondary">/ day</span></span>
+</div>
+<button class="px-3.5 py-2 bg-surface-container hover:bg-primary hover:text-on-primary font-label-caps text-label-caps uppercase transition-colors flex items-center gap-1" onclick="addToQuote('Maharani Emerald Sofa', 'â‚¹12,500')">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span class="">Add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="bg-surface-container-lowest flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Four-pillar grand acrylic and crystal dome wedding mandap with overhead suspended chandelier and floral canopy for Hindu marriage ceremonies" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGFWwEabpw_q9S9iL62kJ_OkA0nFyzdr-pQyLfHWLDe3xVedxr2JbeVTx3hs-LtMf20A0Gj3Utp-FMelH1JNVrQHRcpjGPFv8m7hopdUqTIJBuTso1pM1zWqVpVPIo3QMVtRS08icI2TQzKeeYZiKFsgN_91iC5Fd1GH4qU3HqIaXAWN-bB4GZybYprAjCZATQw0CZBZXVZd3uB8vhCrbK_JJODus6dQ_jDaLpyFvOlPi1smUGpMuHwg">
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 px-2.5 py-1 backdrop-blur-sm">
+<span class="font-label-caps text-[10px] uppercase text-primary font-semibold">Mandap Masterpiece</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-1">Ceremony Sanctuaries</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-medium">Crystal Cascade Mandap</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">4 acrylic fluted pillars, central floral truss ring, fire-safe brass havan kund table.</p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase block">Ceremony Setup</span>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">â‚¹65,000 <span class="font-body-sm text-xs font-sans text-secondary">/ event</span></span>
+</div>
+<button class="px-3.5 py-2 bg-surface-container hover:bg-primary hover:text-on-primary font-label-caps text-label-caps uppercase transition-colors flex items-center gap-1" onclick="addToQuote('Crystal Cascade Mandap', 'â‚¹65,000')">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span class="">Add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="bg-surface-container-lowest flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Seamless glossy white acrylic wedding bridal ramp runway with subtle soft ambient LED floor underlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7giEA0bBnOE507coSZgis6vY3TnfmcbGCOfAmEhWtOsELpPpp7db2feMtpeZbSD4Ev0EFOysMqF53jaImOAn2GYOYuHZGk0VTCo3jb8hLzWXavPqGigw2MGtQBerhgKdB4MH0BWJRcQ4jD0aTkl-wbt74tMzSSmvOn0sBkfWvaktkvKR_bQ-D2uKKlqwDkKih7WsK9OAAYtE5H_W6jJ7CqMcNtJ6hSiTK3SXKzIsQhDOzZv3TqoGvHg">
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 px-2.5 py-1 backdrop-blur-sm">
+<span class="font-label-caps text-[10px] uppercase text-primary font-semibold">Custom Rigging</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-1">Ramps &amp; Stages</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-medium">Infinite LED Bridal Runway</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">Seamless high-gloss acrylic stage with controllable warm 2700K ambient LED perimeter glow.</p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase block">Per Section</span>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">â‚¹28,000 <span class="font-body-sm text-xs font-sans text-secondary">/ setup</span></span>
+</div>
+<button class="px-3.5 py-2 bg-surface-container hover:bg-primary hover:text-on-primary font-label-caps text-label-caps uppercase transition-colors flex items-center gap-1" onclick="addToQuote('Infinite LED Bridal Runway', 'â‚¹28,000')">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span class="">Add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 7 -->
+<div class="bg-surface-container-lowest flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Bohemian 12-arm cut crystal chandelier glowing brightly with brass frame details suspended against dark drapery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5StkERHA9k6aDT-LUVT9RDhVu-8XhEy-4ckvcLy3jZTadwkbjf5bHGWyYwkSwhifnNzucpbeag1KJeKtwkHA4lwvCTEghvs5mD2Ag7U77rYtGKaAtm_Id1THYOnTR9g5f8J-vhNBUioMzQyHAIONV1kM3UTaNFr4mFpm9rXsLFVsCLoZYsWJw3HsNzd-ai97NxeIczraLjLt2r1ZKHJBjkUvdPWSaTo3pPmFd_vSGR-P9OIWNphGe7g">
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 px-2.5 py-1 backdrop-blur-sm">
+<span class="font-label-caps text-[10px] uppercase text-primary font-semibold">Crystal Masterpiece</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-1">Grand Illumination</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-medium">Versailles 12-Arm Chandelier</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">Belgian cut crystal prisms, certified heavy-duty drop rigging and dual-circuit dimmers.</p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase block">Daily Rental</span>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">â‚¹7,500 <span class="font-body-sm text-xs font-sans text-secondary">/ day</span></span>
+</div>
+<button class="px-3.5 py-2 bg-surface-container hover:bg-primary hover:text-on-primary font-label-caps text-label-caps uppercase transition-colors flex items-center gap-1" onclick="addToQuote('Versailles 12-Arm Chandelier', 'â‚¹7,500')">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span class="">Add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 8 -->
+<div class="bg-surface-container-lowest flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Five-piece luxury table place setting featuring 24k gold trimmed charger plate, crystal water goblet, and brushed gold royal fork and knife" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGbyF4XdWZ2bWOBc90BnZT16L08y3lm3gKpJUGFZyl64yILfHuJEIOTrIQFDtyemH-d0Xj6Y3xAyZQIvvRbiKRR1Hao8uDHreca8KBHK8tbXpgbRvMMHyW8ujaIzCFVZYuUX9x243dL5MBvhXg2mkVIDwVsIIdwR7Xlw6nalU5okG8IMhyJByJkoJDgbpzToH2SxJbHpOgZgQxeLi7pjmKovF133VEQUC1jwMk32TD-s45pruhpzi9Ng">
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 px-2.5 py-1 backdrop-blur-sm">
+<span class="font-label-caps text-[10px] uppercase text-primary font-semibold">Fine Dining</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-1">Place Settings</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-medium">24K Gold Rim Setting</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">5-piece set: Charger, dinner plate, side plate, crystal stemware, and royal gold cutlery.</p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-[10px] text-secondary uppercase block">Per Cover</span>
+<span class="font-headline-sm text-headline-sm text-primary font-serif">â‚¹380 <span class="font-body-sm text-xs font-sans text-secondary">/ cover</span></span>
+</div>
+<button class="px-3.5 py-2 bg-surface-container hover:bg-primary hover:text-on-primary font-label-caps text-label-caps uppercase transition-colors flex items-center gap-1" onclick="addToQuote('24K Gold Rim Setting', 'â‚¹380')">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span class="">Add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Sticky Quote Cart Toast / Drawer Preview -->
+<div class="mt-8 bg-inverse-surface text-inverse-on-surface p-4 lg:p-6 shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-4" id="cart-toast">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold text-inverse-on-surface" id="cart-status-text">Your Quote Cart has 2 active selections</p>
+<p class="font-body-sm text-body-sm text-secondary-fixed-dim">Selected: Empress Chairs (x150) â€¢ Versailles Chandelier (x4)</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<a class="px-6 py-2.5 bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container font-label-caps text-label-caps uppercase tracking-widest transition-colors flex items-center gap-1.5" href="#quote-enquiry">
+<span class="">Proceed to Itemized Quote</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. WHY CHOOSE US (6 Architectural Value Pillars) -->
+<section class="w-full max-w-7xl mx-auto px-gutter-mobile lg:px-gutter py-24">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">The Virasat Royale Standard</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Why India's Finest Planners Trust Us</h2>
+<p class="font-body-md text-body-md text-secondary mt-2 font-light">White-glove event production logistics, immaculate maintenance, and authentic royal finishes trusted for decade-defining celebrations.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="p-8 bg-surface-container-lowest hover:shadow-lg transition-all duration-300 group">
+<div class="w-12 h-12 mb-6 bg-surface-container-low text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-semibold">Pristine Quality Maintenance</h3>
+<p class="font-body-md text-body-md text-secondary font-light">Every wooden frame is hand-buffed, fabrics dry-cleaned, and brassware polished before dispatch from our climate-controlled depots.</p>
+</div>
+<!-- Feature 2 -->
+<div class="p-8 bg-surface-container-lowest hover:shadow-lg transition-all duration-300 group">
+<div class="w-12 h-12 mb-6 bg-surface-container-low text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">inventory_2</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-semibold">Unrivaled 1,000+ SKU Catalog</h3>
+<p class="font-body-md text-body-md text-secondary font-light">From 18th-century Rajputana thrones to contemporary French mirrored dining tables and European concert trusses.</p>
+</div>
+<!-- Feature 3 -->
+<div class="p-8 bg-surface-container-lowest hover:shadow-lg transition-all duration-300 group">
+<div class="w-12 h-12 mb-6 bg-surface-container-low text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">engineering</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-semibold">Professional Turnkey Setup</h3>
+<p class="font-body-md text-body-md text-secondary font-light">Uniformed, factory-trained rigging technicians, carpenters, and sound engineers ensure flawless execution under strict deadlines.</p>
+</div>
+<!-- Feature 4 -->
+<div class="p-8 bg-surface-container-lowest hover:shadow-lg transition-all duration-300 group">
+<div class="w-12 h-12 mb-6 bg-surface-container-low text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">local_shipping</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-semibold">Guaranteed 4-Hour Early Staging</h3>
+<p class="font-body-md text-body-md text-secondary font-light">We stage setups a minimum of 4 hours prior to guest arrival, paired with dedicated on-site stand-by maintenance teams.</p>
+</div>
+<!-- Feature 5 -->
+<div class="p-8 bg-surface-container-lowest hover:shadow-lg transition-all duration-300 group">
+<div class="w-12 h-12 mb-6 bg-surface-container-low text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">tune</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-semibold">Modular &amp; Scalable Packages</h3>
+<p class="font-body-md text-body-md text-secondary font-light">Flexible curation tailored equally for an intimate 60-guest rooftop engagement or a 3,500-guest royal palace wedding celebration.</p>
+</div>
+<!-- Feature 6 -->
+<div class="p-8 bg-surface-container-lowest hover:shadow-lg transition-all duration-300 group">
+<div class="w-12 h-12 mb-6 bg-surface-container-low text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">workspace_premium</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-semibold">Decade of Heritage Experience</h3>
+<p class="font-body-md text-body-md text-secondary font-light">Partner of choice for India's high-net-worth families, premier luxury hotel chains, and international wedding designers.</p>
+</div>
+</div>
+</section>
+<!-- 6. WEDDING EXPERIENCE (Editorial Split-Screen Showcase) -->
+<section class="w-full bg-surface-container-lowest py-24">
+<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Left Visual Side -->
+<div class="lg:col-span-6 relative">
+<div class="aspect-[4/5] w-full overflow-hidden shadow-2xl relative bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Editorial wedding reception setup inside a Jaipur royal heritage palace banquet hall, tall ceiling with intricate frescoes, warm candlelit dining tables, gold chairs and white rose floral arrangements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMun19KydhwswNWd-Wmx_-_lYntVhqd36WrS-CSGBg65hZ2pMV3EpleK2QMHS1H56bwfakqLneW5ymKrSs97AL2IWr-gfNc8yAolniv9quiLcHALSKSBFTrzniHI9iZpCt64aypjpIeF97mChSv2qejCJkbFHI_TVIHTwWw3l7w-rEHw4RT9uGdjnPYG_ZjP4-Nicn-3r8ORW09pcsCXCT-6JRhgea1MmujdJXKuGBX-ErVJsarV20eA">
+</div>
+<!-- Inset Decorative Floating Card -->
+<div class="absolute -bottom-8 -right-6 hidden sm:block bg-surface-container-lowest p-6 shadow-xl max-w-xs">
+<div class="flex items-center gap-2 mb-2 text-primary">
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="material-symbols-outlined text-[20px]">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">"Flawless execution. The mandap and chandeliers brought our regal dream to life."</p>
+<span class="font-label-caps text-[10px] text-secondary uppercase tracking-widest mt-2 block">â€” The Oberoi Udaivilas</span>
+</div>
+</div>
+<!-- Right Content Narrative -->
+<div class="lg:col-span-6 flex flex-col gap-6 lg:pl-6">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest">Architectural Event Artistry</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-tight">
+            From Your Vision to the <span class="italic font-normal text-primary">Perfect</span> Celebration
+          </h2>
+<p class="font-body-lg text-body-lg text-secondary font-light">
+            From handcrafted royal furniture and majestic mandaps to architectural crystal lighting, fine dining bone china, and silent climate infrastructure, we harmonize every nuance of your celebration with poise and clockwork precision.
+          </p>
+<div class="space-y-4 pt-2">
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-primary-container/20 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-semibold text-on-surface">Bespoke Mock-up Showroom Trials</h4>
+<p class="font-body-sm text-body-sm text-secondary">Experience full table settings and lounge configurations at our New Delhi or Mumbai atelier prior to signing.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-primary-container/20 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-semibold text-on-surface">3D Spatial Simulation Support</h4>
+<p class="font-body-sm text-body-sm text-secondary">Our interior architects map exact chair counts, gangway measurements, and stage clearances onto your CAD floorplan.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-primary-container/20 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-semibold text-on-surface">Dedicated On-Site Duty Engineer</h4>
+<p class="font-body-sm text-body-sm text-secondary">A senior logistics manager remains on-site for the duration of the event to oversee lighting levels, furniture adjustments, and tear-down.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-4 pt-6">
+<a class="px-8 py-4 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-md" href="#quote-enquiry">
+              Start Planning Your Event
+            </a>
+<a class="px-6 py-4 bg-surface-container text-on-surface font-label-caps text-label-caps uppercase tracking-widest hover:bg-surface-container-high transition-colors" href="tel:+919820045678">
+              Book Showroom Consultation
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. EVENT TYPES (Visual Grid) -->
+<section class="w-full max-w-7xl mx-auto px-gutter-mobile lg:px-gutter py-24">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">Occasion Versatility</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Perfect For Every Celebration</h2>
+<p class="font-body-md text-body-md text-secondary mt-2 font-light">Signature rental aesthetics tuned to the sacred rites and high-glamour requirements of South Asian celebrations.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Event 1: Weddings -->
+<div class="relative group h-64 overflow-hidden bg-inverse-surface cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-70" data-alt="Grand royal Indian wedding ceremony setup with bride and groom chairs surrounded by floral mandap and diyas" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-O9iVuhUGtXtFEOJGN7sueZZ1OwfEnYICMgh1p5uYvMs1goqGocg7lZjlye2vn3nZo6QWz7jNEWKPHrOP06e55J10eQtDG61qFYpwNH50JANSyXcxmXTDeO4wwJ2BBOyj-VELKA2nlpWWXLhxs9SNKnI3nJjTh5KymWtLUqnN_QvGlHDTHUXBLCgJ4yNJ3OYQc3TN-zn1g0GCkPLyo_U5fySLTSJ3Mdim8t6gJcQr6cDQk7eNo-0A8Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-inverse-on-surface">
+<span class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider block">Sacred Rites</span>
+<h3 class="font-headline-sm text-headline-sm tracking-normal">Weddings</h3>
+</div>
+</div>
+<!-- Event 2: Engagements -->
+<div class="relative group h-64 overflow-hidden bg-inverse-surface cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-70" data-alt="Romantic engagement soiree dinner with warm ambient fairy lights, mirrored dinner tables and candle centerpieces" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBF4QNA7teCGxHZ9O7M49u3HF9AYQwo-b3ikgeAgJySmnDnLHcQomcYRYuu4I88SKUe1CJmtj5_ywBaoHjVn-EHqN0BnBn5pPkMrtTbfHAKZ7ZFCEratCNnSX6hHSnCOlhUFkbgsE6EdTAm7xjUyUOvxoc-2kAXB6ko5Jzu1nSw2NsNb8YJ2M7JXmbnzft11MBdt4URNOxBN5xAsRKqRzlViChVBl2atqoovPzsr-VCmbK5J0LVFoINhA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-inverse-on-surface">
+<span class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider block">Intimate SoirÃ©es</span>
+<h3 class="font-headline-sm text-headline-sm tracking-normal">Engagements</h3>
+</div>
+</div>
+<!-- Event 3: Receptions -->
+<div class="relative group h-64 overflow-hidden bg-inverse-surface cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-70" data-alt="Lavish wedding reception stage with high-tier chandelier rigs, velvet backdrop and gold chiavari guest seating" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDhn1JLeO89ZVkhvytiN97beDI1aZfsJuxhBS22ImWmhN1yAwadcXNLIz2qfvQjPT22swWvFcRUc-VmZQD3CTVQhH7fOP-0s_uEKnQZmN6iGclitBldVi5-rUCyiRxbMhtRhXfUsjIY0Pm5sxAJQuA2I_WLpRjq-KejjesUHQ2ZpDiiJkAnD-HtFBBTLPnYrWRligMOcXBbcOwemJ5mbSoVKfT680TZTWDj8lSoXlgoMF8JtIIGdQtPjg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-inverse-on-surface">
+<span class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider block">Formal Gala</span>
+<h3 class="font-headline-sm text-headline-sm tracking-normal">Receptions</h3>
+</div>
+</div>
+<!-- Event 4: Sangeet & Cocktail -->
+<div class="relative group h-64 overflow-hidden bg-inverse-surface cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-70" data-alt="High-energy luxury Sangeet and cocktail lounge with sleek illuminated bar, neon accents, and modular velvet diwans" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSIF7KV_YFdMkfTv4STySJ_aCERPuT7sFP1kai8D8KW4FEPhKIUcRUMfPejQwE4M1EpssWYBB1mSu78_WCobP_4DRTi28yGLdKLNvK7BzYxZVnDJwmIXOddQxybVoInGKFXU2mggQf2aQW0SxxZ54F_PekZRihXhnKybMwlgiGML2CVvp0eAMoFQnOrmjLSmqV0vvLwqDgGZEP2mE_ixIvJzcJPQ1X1u7puigqq99KHvTkvFK_kKax6A')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-inverse-on-surface">
+<span class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider block">Music &amp; Dance</span>
+<h3 class="font-headline-sm text-headline-sm tracking-normal">Sangeet &amp; Cocktail</h3>
+</div>
+</div>
+<!-- Event 5: Mehndi & Haldi -->
+<div class="relative group h-64 overflow-hidden bg-inverse-surface cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-70" data-alt="Vibrant daytime Haldi and Mehndi celebration with marigold yellow floral setups, brass swing and colorful Indian poufs" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqTGIpES39RGnlW99v2YcDzHRzyN6kP5HCnYyT1cFWACyPAWEkwayEiE57e6GMqqAUGcG2Yfx-jD4hCDIqu9Bz4wyhzRn18E1PUyEzWlPKm4HZw4Ab9sRu8Ye9nWAqJPedq7bhhx6CIohveh3HVqlZ8hyEUguUmBWYBmKqkD7porj2yonyWwC0OTxoWIjN5TV1NxqIwxDH58fy7Fy6lZfNQ3ORmdX5hPXK9lfEFFMPyckeohnMl527-Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-inverse-on-surface">
+<span class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider block">Festive Daytime</span>
+<h3 class="font-headline-sm text-headline-sm tracking-normal">Mehndi &amp; Haldi</h3>
+</div>
+</div>
+<!-- Event 6: Corporate Galas -->
+<div class="relative group h-64 overflow-hidden bg-inverse-surface cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-70" data-alt="Black-tie corporate awards gala dinner with sleek minimalist seating, acoustic sound truss, and architectural uplighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDONcibVcaxr5sO-OEB2LXBpLSE7F26onNgTih1JnpDU0mKkdP3iNTLCrnAkp7VZuC3YbtTCNhPJKCtRwP48dSSj_rdrkHX_SpZJwCm7hqhYRT0mUrbxowZA_xkbxYC3zTmCGlNOeSM2RdMHlVotJVEpZwOL4YK5k8PuRF9JkXRYMc2NZ6NSoSW78qNzcX44ZRXue2IJwsi3IVbNv8acOWOUi51t-SYU4zVmSaB1YQFM8HjBVquzptIDw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-inverse-on-surface">
+<span class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider block">Executive Affairs</span>
+<h3 class="font-headline-sm text-headline-sm tracking-normal">Corporate Galas</h3>
+</div>
+</div>
+<!-- Event 7: Luxury Brand Exhibitions -->
+<div class="relative group h-64 overflow-hidden bg-inverse-surface cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-70" data-alt="Haute couture luxury jewellery exhibition lounge with pristine white museum display plinths and accent spotlighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBs1Ml1XYX3cVbAh3c3EgqsUhMOZZbigZChssG96Eh61famU7cOXylliwmGOHVH0IWmJy4HjRopp8CdaVK2EFgNtGl4J9JWCuoXbDldnd-4c9Z-uJMw-jQkuVOQNKe75t2EoGJf1DliT80xZhwCYNHKAjIEo65PCdhanOZBGQLFRY3aFVtfXg8IG6y2M-SehG2tAAfVAs_5b43AQUBuv6gjEabfG172hLlRgAAE3osE9u9leYQ2yfRW3A')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-inverse-on-surface">
+<span class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider block">Curated Showcases</span>
+<h3 class="font-headline-sm text-headline-sm tracking-normal">Brand Exhibitions</h3>
+</div>
+</div>
+<!-- Event 8: Royal Destinations -->
+<div class="relative group h-64 overflow-hidden bg-inverse-surface cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-70" data-alt="Destination palace wedding at Lake Pichola Udaipur with complete German hangar marquee and royal vintage car rental props" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfpLOppzqY2Cq_kRZMlPd_1USncZf75SwA84URfRvzTuiK1lQiMA-ZVTxlSz1w5oKyQKuTe2gzmP9_oDGuEFkt-TnWzGfIzDwWchEBBJ5LQYbYG1WQpYla5LUD7BZZRoBsEzpYVM_NO1w1zssByE4-RlqUdvb4rxX7P0Ww1LT9LLjY_utCOHJAsQXovLyJz_PnW2RkMoyyA7Ki3RmbihQGFTaSWaXs3uK8xWaXlYCs1g2Pw3fn8d37BA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 text-inverse-on-surface">
+<span class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider block">Multi-Day Palaces</span>
+<h3 class="font-headline-sm text-headline-sm tracking-normal">Royal Destinations</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. PACKAGES PREVIEW (3 Luxury Tiers) -->
+<section class="w-full bg-surface-container py-24" id="packages">
+<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">Turnkey Rental Curations</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Curated Event Packages</h2>
+<p class="font-body-md text-body-md text-secondary mt-2 font-light">Comprehensive collections configured for guest scales, offering transparent pricing and simplified logistics.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+<!-- Package 1: ESSENTIAL -->
+<div class="bg-surface-container-lowest p-8 lg:p-10 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest block mb-2">Intimate Occasions</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">The Essential SoirÃ©e</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-6">Designed for Engagements, Roka, and intimate Sangeet up to 150 guests.</p>
+<div class="mb-8">
+<span class="font-label-caps text-[10px] text-secondary uppercase block">Starting at</span>
+<div class="font-headline-md text-headline-md text-primary font-serif">â‚¹85,000</div>
+<span class="font-body-sm text-xs text-secondary font-sans">+ local logistics &amp; security deposit</span>
+</div>
+<div class="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">Up to 150 Chiavari or Empress Chairs</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">15 Mirrored or Velvet Banquet Tables</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">Bridal Couple Raised Platform (16Ã—12 ft)</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">Warm Accent Uplighting &amp; 2 Chandeliers</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">Dedicated Setup Supervisor</span>
+</div>
+</div>
+</div>
+<a class="mt-8 w-full py-3.5 bg-surface-container hover:bg-primary hover:text-on-primary font-label-caps text-label-caps uppercase text-center transition-colors" href="#quote-enquiry">
+            Request Essential Quote
+          </a>
+</div>
+<!-- Package 2: PREMIUM (Featured Tier) -->
+<div class="bg-surface-container-lowest p-8 lg:p-10 flex flex-col justify-between shadow-2xl relative border-2 border-primary-container">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-4 py-1 font-label-caps text-[10px] uppercase tracking-widest shadow-md">
+            Most Selected
+          </div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">Grand Celebrations</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Grand Wedding &amp; Sangeet</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-6">Full ceremonial mandap, guest seating, and acoustic rig for 300 to 600 guests.</p>
+<div class="mb-8">
+<span class="font-label-caps text-[10px] text-secondary uppercase block">Starting at</span>
+<div class="font-headline-md text-headline-md text-primary font-serif">â‚¹2,40,000</div>
+<span class="font-body-sm text-xs text-secondary font-sans">Turnkey on-ground delivery included</span>
+</div>
+<div class="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">Up to 450 Gold Chiavari &amp; Royal Chairs</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">4-Pillar Carved or Acrylic Crystal Mandap</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">Full Maharaja Stage &amp; Diwan Lounges</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">8 Versailles Chandeliers + Fairy Ceiling Canopy</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">JBL VRX Audio Rig &amp; Concert Stage Trussing</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">On-Site Standby Duty Technician Crew</span>
+</div>
+</div>
+</div>
+<a class="mt-8 w-full py-3.5 bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container font-label-caps text-label-caps uppercase text-center transition-colors shadow-md" href="#quote-enquiry">
+            Request Premium Quote
+          </a>
+</div>
+<!-- Package 3: ROYAL HERITAGE -->
+<div class="bg-surface-container-lowest p-8 lg:p-10 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest block mb-2">Multi-Day Destination</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">The Royal Heritage</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-6">Complete palace infrastructure, air-conditioned German hangers, and luxury dining.</p>
+<div class="mb-8">
+<span class="font-label-caps text-[10px] text-secondary uppercase block">Starting at</span>
+<div class="font-headline-md text-headline-md text-primary font-serif">â‚¹5,50,000</div>
+<span class="font-body-sm text-xs text-secondary font-sans">Multi-day destination staging</span>
+</div>
+<div class="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">German Hanger A/C Clear-Span Structure</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">Complete Bespoke Mandap &amp; Mirror Ramp</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">24k Gold Rim Bone China (500+ covers)</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">Heavy Silent Diesel Gensets &amp; Cable Runs</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">Vintage Royal Palanquin (Doli) &amp; Props</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">check_circle</span>
+<span class="">Dedicated Production Director on Location</span>
+</div>
+</div>
+</div>
+<a class="mt-8 w-full py-3.5 bg-surface-container hover:bg-primary hover:text-on-primary font-label-caps text-label-caps uppercase text-center transition-colors" href="#quote-enquiry">
+            Request Royal Heritage Quote
+          </a>
+</div>
+</div>
+<div class="mt-12 text-center">
+<a class="font-label-caps text-label-caps uppercase text-primary tracking-widest inline-flex items-center gap-2 hover:underline" href="#quote-enquiry">
+<span class="">Need a customized combination? Build a custom package</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 9. HOW IT WORKS (5 Seamless Timeline Steps) -->
+<section class="w-full max-w-7xl mx-auto px-gutter-mobile lg:px-gutter py-24">
+<div class="text-center max-w-2xl mx-auto mb-20">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">Concierge Workflow</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">How It Works</h2>
+<p class="font-body-md text-body-md text-secondary mt-2 font-light">From initial design inspiration to midnight post-event tear-down, our 5-step protocol is effortless.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
+<!-- Step 01 -->
+<div class="bg-surface-container-lowest p-6 flex flex-col justify-between relative group hover:shadow-md transition-all">
+<div>
+<span class="font-headline-md text-headline-md text-primary-container font-serif block mb-3">01</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-semibold">Share Event Brief</h3>
+<p class="font-body-sm text-body-sm text-secondary">Tell us your dates, guest count, venue coordinates, and design aesthetic.</p>
+</div>
+<div class="pt-6">
+<span class="font-label-caps text-[10px] text-primary uppercase tracking-widest">Initial Consultation</span>
+</div>
+</div>
+<!-- Step 02 -->
+<div class="bg-surface-container-lowest p-6 flex flex-col justify-between relative group hover:shadow-md transition-all">
+<div>
+<span class="font-headline-md text-headline-md text-primary-container font-serif block mb-3">02</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-semibold">Select Inventory</h3>
+<p class="font-body-sm text-body-sm text-secondary">Browse our 1,000+ catalog or select a curated package with our stylist.</p>
+</div>
+<div class="pt-6">
+<span class="font-label-caps text-[10px] text-primary uppercase tracking-widest">Catalog Curation</span>
+</div>
+</div>
+<!-- Step 03 -->
+<div class="bg-surface-container-lowest p-6 flex flex-col justify-between relative group hover:shadow-md transition-all">
+<div>
+<span class="font-headline-md text-headline-md text-primary-container font-serif block mb-3">03</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-semibold">Custom Quotation</h3>
+<p class="font-body-sm text-body-sm text-secondary">Receive an itemized transparent quotation within 2 business hours.</p>
+</div>
+<div class="pt-6">
+<span class="font-label-caps text-[10px] text-primary uppercase tracking-widest">Rapid Response</span>
+</div>
+</div>
+<!-- Step 04 -->
+<div class="bg-surface-container-lowest p-6 flex flex-col justify-between relative group hover:shadow-md transition-all">
+<div>
+<span class="font-headline-md text-headline-md text-primary-container font-serif block mb-3">04</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-semibold">Confirm Booking</h3>
+<p class="font-body-sm text-body-sm text-secondary">Lock exclusive fleet inventory with a secure date reservation deposit.</p>
+</div>
+<div class="pt-6">
+<span class="font-label-caps text-[10px] text-primary uppercase tracking-widest">Inventory Guaranteed</span>
+</div>
+</div>
+<!-- Step 05 -->
+<div class="bg-surface-container-lowest p-6 flex flex-col justify-between relative group hover:shadow-md transition-all">
+<div>
+<span class="font-headline-md text-headline-md text-primary-container font-serif block mb-3">05</span>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-2 font-semibold">Flawless Setup</h3>
+<p class="font-body-sm text-body-sm text-secondary">White-glove delivery, structural rigging, on-site support &amp; neat tear-down.</p>
+</div>
+<div class="pt-6">
+<span class="font-label-caps text-[10px] text-primary uppercase tracking-widest">Zero Hassle</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. GALLERY PREVIEW (Curated Royal Masonry) -->
+<section class="w-full bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">Visual Portfolio</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Curated Real Setups</h2>
+<p class="font-body-md text-body-md text-secondary mt-2 font-light">Captured at India's foremost destination palaces and luxury five-star properties.</p>
+</div>
+<a class="font-label-caps text-label-caps uppercase text-primary tracking-widest inline-flex items-center gap-2 group" href="#quote-enquiry">
+<span class="">View Full 150+ Event Archive</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Gallery Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- 1 -->
+<div class="relative group h-80 overflow-hidden bg-surface-container-high cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Opulent nighttime outdoor wedding mandap in Udaipur with thousands of floating tea lights on water reflection pond and illuminated carved stone arches" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoXogmtzsuhkHCKCX6Iwhxc9WwSLPtIlQaW8F_3NfadNNgNlyaQVMN7Pm3nBblg6UDlSJ9GiDdc363tAcctEjfovvV6KRGxENTiKWfu71beL9ujaSgtwLUBdyeS7C0ayMRuF2q9yPJ4JTXUqH6S5hg9zaLkXV3J1tScxHi08qKperV65hVhT54VaLBJnZIoNbYGPQBvRwPO5WzkmL6Vzoq741yzGiO8abklSYetHepyE-u_Wy01lDN6g">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider">Mandap Installation</span>
+<p class="font-headline-sm text-headline-sm text-inverse-on-surface">Umaid Bhawan Palace</p>
+<span class="font-body-sm text-xs text-secondary-fixed-dim">Jodhpur, Rajasthan</span>
+</div>
+</div>
+<!-- 2 -->
+<div class="relative group h-80 overflow-hidden bg-surface-container-high cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Intricate floral chandelier installation suspended over mirrored imperial dining tables with royal gold chairs for a destination wedding in Jaipur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQpAU6B7PdUa2groTAbG_Z1ImN_qwlhdfdX3TVu1Z0qomQ_QtEfjHXbzhnTWb18h9XVqRpH9I2_1joQ4xyEdiptiX0dXX3vNnuQYXBxES3XnTV5FC0cA0AQioo-ukpPopp3FbClh-775cYLKAzScv6pUKIv0TdJePN7beZd530bblUCTySff646Y5o264G9lUs3-SGMYmR-zPmBmNkYKHpG3srA3bTOHtLhrRxGEUc3ruqb5iS2bvPbA">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider">Reception Dining</span>
+<p class="font-headline-sm text-headline-sm text-inverse-on-surface">Rambagh Palace</p>
+<span class="font-body-sm text-xs text-secondary-fixed-dim">Jaipur, Rajasthan</span>
+</div>
+</div>
+<!-- 3 -->
+<div class="relative group h-80 overflow-hidden bg-surface-container-high cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Magnificent nighttime palace courtyard banquet with Belgian crystal chandeliers and candle lit diwan lounge seating" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDztVqjv6LSoKYRsvDdOogL5bby6BSUOaAqfhmVqFbMD_CjlmWvhX0jwTnDPh5pSig38IqrO1QM4zvFK0SQBgqMgz4KDhlTqYOOfQm18bAx2JkvD9uEZUxPDPXX9NswFkgZmT6_6oQ291bB40ti9EBYH2dkv2dhhWx-nUMVmB34E1TfJAuVK91gwpVMMknq2z8kPHoFAHcrqYBfpTseDzxJ_Usybwc_20XNdU8Nqr2zQDx8UoW_-67A2Q">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider">Grand Courtyard Gala</span>
+<p class="font-headline-sm text-headline-sm text-inverse-on-surface">Taj Falaknuma</p>
+<span class="font-body-sm text-xs text-secondary-fixed-dim">Hyderabad, Telangana</span>
+</div>
+</div>
+<!-- 4 -->
+<div class="relative group h-80 overflow-hidden bg-surface-container-high cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Beachfront luxury wedding tent canopy in Goa decorated with ivory silk drapery, crystal chandeliers, and white chiavari dining chairs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHN9aFbQx_ssOmryo9hUKouTpVk5qQo4oNkiSQCjx8C_seZTpK_EdheBcBnblZGIVhES92r771vJdDKqdREuksVI9JbSpX2-iqDKxg3j0YZ2vs5WlPMlFM1SQQqMABnt1vFSDdELa6MzAcEnU3kBhCan8GaaQFM_BIpKZ6UtcGWvL2J4jzdOIWf-DnB14PaMCFviY57mxuef2Rmagxl3-VzsjUhQEExSGAyFFpaS81qZL2MVe6Zqwy3w">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-caps text-[10px] text-primary-fixed uppercase tracking-wider">Coastal Shamiana</span>
+<p class="font-headline-sm text-headline-sm text-inverse-on-surface">The Leela Goa</p>
+<span class="font-body-sm text-xs text-secondary-fixed-dim">Cavelossim Beach, Goa</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 11. CLIENT TESTIMONIALS (High-Profile Planners & Couples) -->
+<section class="w-full max-w-7xl mx-auto px-gutter-mobile lg:px-gutter py-24">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">Words of Praise</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Trusted By India's Elite Planners</h2>
+<p class="font-body-md text-body-md text-secondary mt-2 font-light">The hallmark of peace-of-mind for multi-crore celebrations and discerning wedding producers.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest p-8 flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface italic font-light mb-6">
+            "Everything looked absolutely breathtaking. The crystal chandeliers and royal mandap transformed the venue into a fairytale. Setup was completed 3 hours ahead of schedule!"
+          </p>
+</div>
+<div class="pt-4 border-t border-surface-container">
+<span class="font-label-md text-label-md font-semibold text-on-surface block">Radhika &amp; Siddharth</span>
+<span class="font-body-sm text-body-sm text-secondary">Destination Wedding at Oberoi Udaivilas</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest p-8 flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface italic font-light mb-6">
+            "As an event producer handling a 1,200-guest luxury corporate gala, Virasat Royale's equipment reliability, stage rigidity, and immaculate furniture polish were truly world-class."
+          </p>
+</div>
+<div class="pt-4 border-t border-surface-container">
+<span class="font-label-md text-label-md font-semibold text-on-surface block">Kabir Mehta</span>
+<span class="font-body-sm text-body-sm text-secondary">Managing Director, Aura Events &amp; Media</span>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-lowest p-8 flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface italic font-light mb-6">
+            "The velvet lounge setups and 24k gold bone china tableware elevated our Sangeet evening beyond expectations. The team was courteous, discreet, and remarkably efficient."
+          </p>
+</div>
+<div class="pt-4 border-t border-surface-container">
+<span class="font-label-md text-label-md font-semibold text-on-surface block">Ananya Singhania</span>
+<span class="font-body-sm text-body-sm text-secondary">South Mumbai Reception Host</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 12. INSTAGRAM REAL SETUP FEED -->
+<section class="w-full bg-surface-container py-16">
+<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter">
+<div class="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block">Live Behind The Scenes</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">Follow Our Setups (@VirasatRoyaleRentals)</h3>
+</div>
+<a class="px-5 py-2.5 bg-surface-container-lowest hover:bg-on-surface hover:text-surface text-on-surface font-label-caps text-label-caps uppercase tracking-wider transition-all flex items-center gap-2" href="https://instagram.com" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span class="">Follow On Instagram</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-6 gap-3">
+<div class="aspect-square bg-surface-container-high overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Chandelier rigging setup behind the scenes with technicians hoisting crystal frames onto high stage truss" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Z-I5SqHMK7dknjvkexCG6HJgtc8E9PSEVbJYhNX0jr0U7al6pk_OnFVVYTw4rIbW_Moc7pMhMfc88qFw3dq37ldOecTtan0ocy-uVl4hTEEb7BzLnSTv4scwGwWLpFKhbnP7zHVNOhO06h7vprqSrq2Da6eGoVYBEk9dSiLEQSIAXZrZjIkwY9G6tTsw-DZYuAhA6ew_-v8TK6dExIscog5zkV3p2nAr_QdijSvaRP_azBBT0Fmkbw">
+</div>
+<div class="aspect-square bg-surface-container-high overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close-up detail of 24k gold tableware place setting with customized monogram linen napkins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6YBjnQCwkG_8CSFcXq9KbyC-omOveJuKIEPvfb8oYFXf_NrPZ_k7fARtCE8Hcvq4NZe8njyrCJqd5xCO4vjLKY3fC32jc1X7Og_7Ja9P_0m-mXr-Ip8go1iUjU9bcRL3OURot6SIFS6118e1SrElEUUWv9ovoY5gBdr9foE8z_AtHRtnz1Sf3q6gqYaIMb906TYRLgZD_6wZhC0lu27TqcBVPVckPYsN7DC7q6rT631Z3eZp88Ub8AQ">
+</div>
+<div class="aspect-square bg-surface-container-high overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Royal velvet diwan seating being placed on marble palace balcony for sunset sangeet cocktail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcKGK7XtBLi-T-PmFbn1_dSiNk6QH9vfle-NpcsmwlehWq9-NopBLKei7H8E7m10Sp5hNrKojDl2JhBS9pi8A4eCu84hO7E2fSeX2GEDlCRBS7HMDnhMjaUJSfurwXuYL4S4kfT_1AKBfhzdSAqZHyv7q3WN5N1H7YB0dhaPgd4bCavpJeOSkLuHSHiAWZZDFfHWy9ym4HoYwBs-J-uTVbBupYS9j2klyL8iarxrB7Va5lLIr5yfM1WA">
+</div>
+<div class="aspect-square bg-surface-container-high overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Carved wooden wedding mandap arch surrounded by hundreds of fresh white tuberoses and marigold garlands" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIZILponUefzzcDR_M1dW_cNZ5lwYPvjVNtyxrKmBGhbx823o-ziyeO4CxLjqT8gqGnbsSglBunHeys_Z060Y9ZW1axKsR4oUJ19pJvAAQGzzWTVp-3qvw9M7Z5niRooJn-zOqgKmkIl9rcQyhjqtIth7HJHHe_EPJnANIpn2_uDBB_sIczRenvUsyIib7Jj0C5gaz87CtkJCojgtcf_sH0fjHS3DAMtBfTIvz_mesYUsDmvm1rPdDQw">
+</div>
+<div class="aspect-square bg-surface-container-high overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="German hanger marquee tent interior with hundreds of guests dining under suspended fairy light curtains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoCnCDAnPfXaYitSm2RDpbtXqH7PAdvr8sRCBOts5KnF0mvijd72qZIq57eJn5GvV6yWqibyq6vz2jJa7VfccQbVY44L6Qc3THT54fOpsWOHdaToa1oxKcMdpUaAcSLM_L5C3oebz8vmsMkLIVaKm9ocXK0g-7oFAkBJMg-R_Gqux6DN4ObDhd84iG73NLtrnb5-QcUqt2lNNbxjoRcPPkMvKve82gOXNtcavn1w-FuNP1PmS8wUEBsg">
+</div>
+<div class="aspect-square bg-surface-container-high overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Vintage silver palanquin doli being prepared with fresh red roses for bridal entry ceremony" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIQURdJjzvEoob4xXMl6ElNsAHeum5zfufPKXU1zGCuBjsT_jUmEVLENp50LsRDfbWOcBCiHZyDeb_7YRBB2BlTgL9SOQjDziFUDmB77jWk0t5Kwi62I8cE2CZvsURDsmt4VgHDWgEF1Kxrjpo1AhW2APqeeQfJGYmFo13b-oMRdCfifk3Uhf_dSivWQ3QqXO9K_xtkVG27bPJ88Q1kMHDDjbuzK_d3nw7cxaQg8VBcun3dw2Z4L3b_g">
+</div>
+</div>
+</div>
+</section>
+<!-- 13. FINAL LUXURY CTA (Dark Velvet Charcoal & Champagne Foil) -->
+<section class="w-full bg-inverse-surface py-24 text-inverse-on-surface relative overflow-hidden">
+<div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="max-w-4xl mx-auto px-gutter-mobile lg:px-gutter text-center relative z-10">
+<span class="font-label-caps text-label-caps uppercase text-primary-fixed-dim tracking-[0.25em] block mb-4">Start The Conversation</span>
+<h2 class="font-display-hero-mobile md:font-headline-lg text-display-hero-mobile md:text-headline-lg tracking-tight mb-6 leading-tight">
+        Planning Your Next <span class="italic font-normal text-primary-fixed">Celebration?</span>
+</h2>
+<p class="font-body-lg text-body-lg text-secondary-fixed-dim font-light max-w-2xl mx-auto mb-10">
+        Share your event date and visionary scale. Our senior rental specialists will curate an itemized bespoke inventory with real-time stock reservations.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-4">
+<a class="px-8 py-4 bg-primary-container text-on-primary-container hover:bg-primary-fixed font-label-caps text-label-caps uppercase tracking-widest shadow-xl transition-all" href="#quote-enquiry">
+          Request An Itemized Quote
+        </a>
+<a class="px-7 py-4 bg-surface-variant/10 text-inverse-on-surface hover:bg-surface-variant/20 font-label-caps text-label-caps uppercase tracking-widest flex items-center gap-2 transition-all" href="https://wa.me/919820045679" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span class="">WhatsApp Concierge (+91 98200 45679)</span>
+</a>
+<a class="px-6 py-4 text-primary-fixed hover:text-inverse-on-surface font-label-caps text-label-caps uppercase tracking-widest inline-flex items-center gap-1.5 transition-colors" href="#" onclick="alert('Downloading 2026 Virasat Royale Haute Rentals Lookbook &amp; Rate Sheet (PDF)...');return false;">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span class="">Download 2026 Catalog (PDF)</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 14. CONTACT & ATELIER PREVIEW (Interactive Quote Intake & Map) -->
+<section class="w-full bg-background py-24" id="quote-enquiry">
+<div class="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+<!-- Left: Quick Intake Form -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-8 lg:p-12 shadow-sm">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">Priority Quotation Desk</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-semibold">Reserve Your Event Date &amp; Inventory</h2>
+<p class="font-body-sm text-body-sm text-secondary mb-8">Receive a comprehensive, itemized line-item quote with delivery logistics within 2 business hours.</p>
+<form class="space-y-6" id="rental-quote-form" onsubmit="handleQuoteSubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="font-label-caps text-[10px] text-secondary uppercase tracking-widest block mb-2">Full Name *</label>
+<input class="w-full pb-2 border-b border-outline-variant bg-transparent text-on-surface font-body-md text-body-md focus:border-primary focus:outline-none transition-colors" placeholder="e.g. Maharani Gayatri / Kabir Rao" required="" type="text">
+</div>
+<div>
+<label class="font-label-caps text-[10px] text-secondary uppercase tracking-widest block mb-2">Phone / WhatsApp Number *</label>
+<input class="w-full pb-2 border-b border-outline-variant bg-transparent text-on-surface font-body-md text-body-md focus:border-primary focus:outline-none transition-colors" placeholder="+91 98200 XXXXX" required="" type="tel">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="font-label-caps text-[10px] text-secondary uppercase tracking-widest block mb-2">Email Address *</label>
+<input class="w-full pb-2 border-b border-outline-variant bg-transparent text-on-surface font-body-md text-body-md focus:border-primary focus:outline-none transition-colors" placeholder="concierge@planner.com" required="" type="email">
+</div>
+<div>
+<label class="font-label-caps text-[10px] text-secondary uppercase tracking-widest block mb-2">Event Date *</label>
+<input class="w-full pb-2 border-b border-outline-variant bg-transparent text-on-surface font-body-md text-body-md focus:border-primary focus:outline-none transition-colors" required="" type="date">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="font-label-caps text-[10px] text-secondary uppercase tracking-widest block mb-2">Event City &amp; Venue *</label>
+<input class="w-full pb-2 border-b border-outline-variant bg-transparent text-on-surface font-body-md text-body-md focus:border-primary focus:outline-none transition-colors" placeholder="e.g. Udaipur / Taj Lake Palace" required="" type="text">
+</div>
+<div>
+<label class="font-label-caps text-[10px] text-secondary uppercase tracking-widest block mb-2">Expected Guest Count</label>
+<select class="w-full pb-2 border-b border-outline-variant bg-transparent text-on-surface font-body-md text-body-md focus:border-primary focus:outline-none transition-colors">
+<option>50 - 150 Guests (Intimate)</option>
+<option selected="">150 - 400 Guests (Medium Grand)</option>
+<option>400 - 1,000 Guests (Grand Wedding)</option>
+<option>1,000+ Guests (Royal Destination)</option>
+</select>
+</div>
+</div>
+<div>
+<label class="font-label-caps text-[10px] text-secondary uppercase tracking-widest block mb-3">Required Rental Categories (Select all that apply)</label>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-on-surface-variant font-body-sm text-xs">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded-none accent-primary" type="checkbox">
+<span class="">Tables &amp; Chairs</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded-none accent-primary" type="checkbox">
+<span class="">Mandap &amp; Stages</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded-none accent-primary" type="checkbox">
+<span class="">Chandeliers &amp; Lights</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="w-4 h-4 rounded-none accent-primary" type="checkbox">
+<span class="">Fine Tableware</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="w-4 h-4 rounded-none accent-primary" type="checkbox">
+<span class="">German Hanger / Tents</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="w-4 h-4 rounded-none accent-primary" type="checkbox">
+<span class="">Sound Rig &amp; Truss</span>
+</label>
+</div>
+</div>
+<div>
+<label class="font-label-caps text-[10px] text-secondary uppercase tracking-widest block mb-2">Special Requests / Specific Pieces</label>
+<textarea class="w-full pb-2 border-b border-outline-variant bg-transparent text-on-surface font-body-md text-body-md focus:border-primary focus:outline-none transition-colors resize-none" placeholder="Tell us if you need custom emerald velvet sofas, mock showroom trials, or generator standby..." rows="3"></textarea>
+</div>
+<div class="pt-2">
+<button class="w-full py-4 bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container font-label-caps text-label-caps uppercase tracking-widest shadow-lg transition-all" type="submit">
+                Submit For Immediate Quotation
+              </button>
+</div>
+<p class="font-body-sm text-xs text-secondary text-center">
+              We respect your privacy. No spam. A senior wedding specialist will respond via WhatsApp &amp; Email.
+            </p>
+</form>
+</div>
+<!-- Right: Atelier Preview, Map & Direct Touchpoints -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-8">
+<div class="space-y-6">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block">Direct Concierge</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Visit Our Flagship Ateliers</h3>
+<p class="font-body-md text-body-md text-secondary font-light">
+              Experience the physical tactile luxury of our furniture pieces, review custom fabric swatches, and meet with our technical staging directors.
+            </p>
+<div class="space-y-4">
+<div class="p-5 bg-surface-container-lowest shadow-sm flex items-start gap-4">
+<div class="w-10 h-10 bg-surface-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">location_on</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-semibold text-on-surface">New Delhi Flagship Showroom &amp; Depot</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">The Grand Pavilion, Sector 29, MG Road, New Delhi 110030</p>
+<span class="font-body-sm text-xs text-primary font-medium mt-1 block">Mon â€“ Sun: 10:00 AM â€“ 8:00 PM IST</span>
+</div>
+</div>
+<div class="p-5 bg-surface-container-lowest shadow-sm flex items-start gap-4">
+<div class="w-10 h-10 bg-surface-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">location_on</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-semibold text-on-surface">Mumbai Logistics &amp; Production Atelier</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Unit 4, BKC West Industrial Estate, Mumbai 400051</p>
+<span class="font-body-sm text-xs text-primary font-medium mt-1 block">By Private Appointment Only</span>
+</div>
+</div>
+<div class="p-5 bg-surface-container-lowest shadow-sm flex items-start gap-4">
+<div class="w-10 h-10 bg-surface-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">call</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-semibold text-on-surface">Direct Line Concierge</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">+91 98200 45678 / +91 98200 45679</p>
+<p class="font-body-sm text-xs text-secondary mt-0.5">concierge@virasatroyale.com</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Static Location Map Representation -->
+<div class="w-full h-56 bg-surface-container-high bg-cover bg-center shadow-md relative group overflow-hidden" data-location="MG Road, New Delhi, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-_6dYRzfw60wKebQmPvW6F2yIGjZa2qA63q8Vi4NF8OBQZ2PaGUktUo8nnLOcYIhcs9GzUzwUCdIroHtsjVTNl_bjvJhizAtVla9p4WO3XuQlV3ljUcnJn-2sJakBdUWtmhUFWNwjsYDRMtnAsq4AZSNmFld8mOtknv3smN5wh3EqpfpfJrQtsPyiH4z7bXoexBpNn_6gLhCWDyRj_b5LHqf7HYNumYdOWoH339UuG_flrgpAszyBiQ')">
+<div class="absolute inset-0 bg-inverse-surface/30 group-hover:bg-inverse-surface/10 transition-colors"></div>
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/90 px-3 py-1.5 backdrop-blur-sm shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">pin_drop</span>
+<span class="font-label-caps text-[10px] uppercase text-on-surface tracking-wider font-semibold">New Delhi Showroom Depot Map</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript for micro-interactions -->
+<script>
+    let quoteItemsCount = 2;
+
+    function addToQuote(itemName, price) {
+      quoteItemsCount++;
+      const cartStatus = document.getElementById('cart-status-text');
+      const cartToast = document.getElementById('cart-toast');
+      
+      if (cartStatus) {
+        cartStatus.innerHTML = `Added: <strong>${itemName}</strong> (${price}) â€” Cart has ${quoteItemsCount} selections`;
+      }
+      
+      // Highlight toast temporarily
+      if (cartToast) {
+        cartToast.classList.add('ring-2', 'ring-primary-container');
+        setTimeout(() => {
+          cartToast.classList.remove('ring-2', 'ring-primary-container');
+        }, 1500);
+      }
+    }
+
+    function handleQuoteSubmit(e) {
+      e.preventDefault();
+      alert('Your quote request has been received by our senior rental desk! A detailed PDF draft and availability confirmation will be shared with you shortly via WhatsApp & Email.');
+      e.target.reset();
+    }
+  </script>
+</div></main><aside class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3"><a aria-label="Back to top" class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface shadow-[0_4px_16px_rgba(43,38,35,0.08)] flex items-center justify-center hover:bg-surface-container transition-colors" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"><span class="material-symbols-outlined text-[20px]">arrow_upward</span></a><div class="relative group flex items-center"><span class="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute right-14 whitespace-nowrap bg-inverse-surface text-inverse-on-surface font-label-caps text-label-caps px-3 py-1.5 rounded shadow-lg">Chat with Wedding Specialist</span><a aria-label="Chat on WhatsApp" class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-[0_8px_24px_rgba(119,90,25,0.35)] hover:scale-105 transition-transform" href="https://wa.me/919820045679" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[24px]">support_agent</span></a></div></aside><footer class="w-full bg-inverse-surface text-inverse-on-surface pt-space-xl pb-space-lg"><div class="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-lg pb-space-xl border-b border-on-surface-variant/20"><div class="lg:col-span-4 flex flex-col gap-space-sm"><div class="flex items-center gap-2"><img alt="Virasat Royale Luxury Rentals Logo" class="h-7 w-auto object-contain brightness-200" src="images/logo.jpg"><span class="font-title-lg text-title-lg text-inverse-on-surface tracking-tight">VIRASAT <span class="italic text-primary-fixed">Royale</span></span></div><p class="font-body-md text-body-md text-secondary-fixed-dim max-w-sm">Curating bespoke furniture, majestic mandaps, architectural lighting, and premier event infrastructure for India's finest weddings and celebrations.</p><div class="flex items-center gap-space-xs text-secondary-fixed-dim"><a aria-label="Instagram" class="w-8 h-8 rounded-full bg-surface-variant/10 flex items-center justify-center hover:text-primary-fixed transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a aria-label="Pinterest" class="w-8 h-8 rounded-full bg-surface-variant/10 flex items-center justify-center hover:text-primary-fixed transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">push_pin</span></a><a aria-label="YouTube" class="w-8 h-8 rounded-full bg-surface-variant/10 flex items-center justify-center hover:text-primary-fixed transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">smart_display</span></a><a aria-label="Facebook" class="w-8 h-8 rounded-full bg-surface-variant/10 flex items-center justify-center hover:text-primary-fixed transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a></div><div class="pt-2"><span class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-wider block">Vogue Wedding Awards Nominee â€¢ EMF Featured</span></div></div><div class="lg:col-span-2 flex flex-col gap-3"><h3 class="font-label-caps text-label-caps uppercase text-primary-fixed tracking-widest">Quick Links</h3><nav class="flex flex-col gap-2 font-body-sm text-body-sm text-secondary-fixed-dim"><a class="hover:text-inverse-on-surface transition-colors" data-path="home" href="#">Home</a><a class="hover:text-inverse-on-surface transition-colors" data-path="about" href="#">About Us</a><a class="hover:text-inverse-on-surface transition-colors" data-path="packages" href="#">Packages</a><a class="hover:text-inverse-on-surface transition-colors" data-path="gallery" href="#">Gallery</a><a class="hover:text-inverse-on-surface transition-colors" data-path="showroom-tour" href="#">Showroom Tour</a><a class="hover:text-inverse-on-surface transition-colors" data-path="faq" href="#">FAQ</a><a class="hover:text-inverse-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav></div><div class="lg:col-span-3 flex flex-col gap-3"><h3 class="font-label-caps text-label-caps uppercase text-primary-fixed tracking-widest">Rental Collections</h3><nav class="flex flex-col gap-2 font-body-sm text-body-sm text-secondary-fixed-dim"><a class="hover:text-inverse-on-surface transition-colors" data-path="rentals" href="#">Tables &amp; Chairs</a><a class="hover:text-inverse-on-surface transition-colors" data-path="rentals" href="#">Royal Mandaps &amp; Stages</a><a class="hover:text-inverse-on-surface transition-colors" data-path="rentals" href="#">Wedding Lounges</a><a class="hover:text-inverse-on-surface transition-colors" data-path="rentals" href="#">Crystal Chandeliers &amp; Lighting</a><a class="hover:text-inverse-on-surface transition-colors" data-path="rentals" href="#">German Tents &amp; Shamianas</a><a class="hover:text-inverse-on-surface transition-colors" data-path="rentals" href="#">Luxury Fine Tableware</a><a class="hover:text-inverse-on-surface transition-colors" data-path="rentals" href="#">DJ &amp; Acoustic Truss</a><a class="hover:text-inverse-on-surface transition-colors" data-path="rentals" href="#">Vintage Royal Props</a></nav></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-label-caps text-label-caps uppercase text-primary-fixed tracking-widest">Private Atelier</h3><div class="flex flex-col gap-2 font-body-sm text-body-sm text-secondary-fixed-dim"><p class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary-fixed mt-0.5">location_on</span><span class="">The Grand Pavilion, MG Road, New Delhi &amp; BKC Depot, Mumbai</span></p><p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary-fixed">call</span><span class="">+91 98200 45678 / 45679</span></p><p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary-fixed">mail</span><span class="">concierge@virasatroyale.com</span></p><p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary-fixed">schedule</span><span class="">Mon - Sun: 10 AM â€“ 8 PM IST</span></p></div><div class="pt-2"><span class="font-label-caps text-label-caps uppercase text-primary-fixed tracking-wider block mb-1.5">Join The Royale Circle</span><p class="font-body-sm text-body-sm text-secondary-fixed-dim mb-2">Receive our annual wedding rental catalog &amp; bespoke curation preview.</p><div class="flex"><input class="bg-surface-variant/10 text-inverse-on-surface placeholder:text-secondary-fixed-dim px-3 py-2 text-body-sm font-body-sm w-full focus:outline-none border-b border-primary-fixed" placeholder="Enter your email" type="email"><button class="bg-primary-container text-on-primary-container px-3 py-2 font-label-caps text-label-caps uppercase hover:bg-primary-fixed transition-colors shrink-0">Join</button></div></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-secondary-fixed-dim"><p class="">Â© 2026 Virasat Royale Luxury Rentals Pvt Ltd. All Rights Reserved.</p><div class="flex flex-wrap items-center gap-space-sm"><a class="hover:text-inverse-on-surface transition-colors" data-path="rental-terms" href="#">Rental Terms &amp; Security Deposit Policy</a><span class="opacity-40">â€¢</span><a class="hover:text-inverse-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><span class="opacity-40">â€¢</span><span class="">GST Registered</span><span class="opacity-40">â€¢</span><a class="hover:text-inverse-on-surface transition-colors" data-path="sitemap" href="#">Sitemap</a></div></div></div></footer>
+
+<script>
+// Mobile Menu Toggle
+function toggleMobileMenu() {
+  var menu = document.getElementById('mobile-menu');
+  var overlay = document.getElementById('menu-overlay');
+  var icon = document.getElementById('hamburger-icon');
+  var isOpen = menu.classList.contains('open');
+  if (isOpen) {
+    menu.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    if(icon) icon.textContent = 'menu';
+  } else {
+    menu.classList.add('open');
+    overlay.classList.add('open');
+    document.body.classList.add('menu-open');
+    if(icon) icon.textContent = 'close';
+  }
+}
+// Close menu on ESC
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var menu = document.getElementById('mobile-menu');
+    if (menu && menu.classList.contains('open')) toggleMobileMenu();
+  }
+});
+// Close menu on resize to desktop
+window.addEventListener('resize', function() {
+  if (window.innerWidth >= 1280) {
+    var menu = document.getElementById('mobile-menu');
+    var overlay = document.getElementById('menu-overlay');
+    if (menu && menu.classList.contains('open')) {
+      menu.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.classList.remove('menu-open');
+    }
+  }
+});
+</script></body></html>
