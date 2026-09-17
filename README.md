@@ -1,49 +1,66 @@
-<img src="images/logo.jpg" alt="Virasat Royale Logo" width="160"/>
+# SHUBHAM EVENTS — Catering • Weddings • Corporate Events • Celebrations
 
-# Virasat Royale — Luxury Wedding & Event Rentals
-
-> **Haute Event Rentals** — Curating bespoke furniture, majestic mandaps, architectural lighting, and premier event infrastructure for India's finest weddings and celebrations.
+> **Premier Event Management & Haute Catering** — Providing complete event planning, lavish wedding management, bespoke catering concepts, corporate conferences, and joyous birthday celebrations across **Chandigarh, Mohali, Panchkula (Tricity)** & surrounding regions.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-gold.svg)](LICENSE)
 [![Status: Live](https://img.shields.io/badge/Status-Live-brightgreen.svg)]()
-[![Stack: HTML + Tailwind CSS](https://img.shields.io/badge/Stack-HTML%20%2B%20Tailwind%20CSS-blue.svg)]()
+[![Stack: HTML5 + Tailwind CSS + Vanilla JS](https://img.shields.io/badge/Stack-HTML5%20%2B%20Tailwind%20CSS-blue.svg)]()
 
 ---
 
 ## 📋 Table of Contents
 
-- [About](#about)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Sections Overview](#sections-overview)
-- [Design System](#design-system)
-- [Contact](#contact)
+- [About Shubham Events](#about-shubham-events)
+- [Client Requirements & Questionnaire Responses](#client-requirements--questionnaire-responses)
+- [Key Features](#-key-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Sections Overview](#-sections-overview)
+- [Direct Booking & WhatsApp Flow](#-direct-booking--whatsapp-flow)
+- [Contact & Tricity Service Area](#-contact--tricity-service-area)
 
 ---
 
-## About
+## About Shubham Events
 
-**Virasat Royale** is a premium luxury event rental website for Pan-India haute event rentals. The platform showcases curated heirloom-grade inventory — handcrafted mandaps, bespoke brassware, royal seating, crystal chandeliers, antique textiles, and luxury tableware — for royal weddings, destination celebrations, and corporate galas.
-
-The design philosophy blends **royal Indian heritage architecture** (jali motifs, arched symmetry, polished marble) with the restrained layout of **haute couture lookbooks and museum monographs**.
+**SHUBHAM EVENTS** (Shubham Catering &amp; Events Management) is a leading full-service event planning and catering firm based in the Tricity. We deliver end-to-end event execution — from majestic wedding mandap architecture and floral styling to live multi-cuisine catering buffets, corporate AV rigs, and themed birthday celebrations.
 
 ---
 
-## ✨ Features
+## Client Requirements & Questionnaire Responses
 
-- 🏛️ **Immersive Hero Section** — Full-bleed palace backdrop with parallax scaling
-- 📊 **Trust Statistics Strip** — 1,200+ curated events, 180+ rental styles, 15+ palace partners
-- 🛋️ **Rental Catalog** — 11 specialized categories with detailed product cards
-- 💎 **Featured Items Carousel** — Curated inventory with IDs, specifications, and pricing
-- 📦 **Tiered Package System** — 3 wedding packages from ₹85,000 to ₹5,50,000
-- 🌙 **Dark / Light Mode** — One-click theme toggle with full dark mode support
-- 📋 **Quote Enquiry Form** — Event date pickers, venue, budget tiers, WhatsApp trigger
-- ❓ **FAQ Accordion** — Rental policies, logistics, and security deposit Q&A
-- 📱 **Fully Responsive** — Mobile, tablet, and desktop optimized layouts
-- ⚡ **Floating Controls** — Sticky WhatsApp concierge + Back-to-top button
-- 🔍 **SEO Optimized** — Semantic HTML, meta tags, and descriptive alt attributes
+| # | Question | Client Answer & Implementation |
+|---|---|---|
+| 1 | **Business Name** | **SHUBHAM EVENTS** (*Catering • Weddings • Corporate Events • Celebrations*) |
+| 2 | **Current Services** | Complete Catering Concept, Birthday Parties, Weddings, Corporate Events, Conferences & Meetings |
+| 3 | **Event Management Scope** | Complete Events (Planning, decor, catering, venue, DJ, sound, photography, hospitality) |
+| 4 | **Event Types** | All Types (Wedding, Birthday, Corporate, Engagement, Anniversary, Social gatherings) |
+| 5 | **Target Customer** | Everyone (Families, Corporate clients, Wedding couples, Institutional clients) |
+| 6 | **Service Area** | **Chandigarh, Mohali, Panchkula (Tricity)** and surrounding regions |
+| 7 | **Previous Work Photos** | Yes — Filterable Tricity portfolio gallery (Weddings, Catering, Corporate, Birthdays) |
+| 8 | **Logo** | Created bespoke luxury royal monogram (`SE`) and gold brand typography |
+| 9 | **Visitor Action** | Direct Booking & WhatsApp Concierge (+ Direct Call) |
+| 10 | **Requirement Submission** | Interactive requirement builder (Event type, date, guests, location, budget, special notes) |
+| 11 | **Packages & Prices** | Transparent tiered packages + Catering per-plate options + WhatsApp booking links |
+| 12 | **Online Payment** | Direct booking reservation with instant WhatsApp confirmation (flexible terms) |
+| 13 | **Customer Reviews** | Yes — Verified 5-star testimonials from Chandigarh, Mohali, and Panchkula clients |
+| 14 | **Design Aesthetic** | Premium, luxury gold/champagne & charcoal aesthetic with modern glassmorphism |
+| 15 | **Brand Perception** | Premium, Trustworthy, Accessible, Luxury, Professional, Creative |
+
+---
+
+## ✨ Key Features
+
+- 👑 **Royal Brand Identity** — Handcrafted gold monogram insignia and luxury typography.
+- 🍲 **Complete Catering Concept** — North Indian, Live Chaat Bazaar, Tandoor, Italian pasta counters, and artisanal dessert bars.
+- 🧮 **Interactive Cost Estimator** — Real-time event & catering price calculator based on guest count and service tiers.
+- 📲 **Instant WhatsApp Dispatch** — One-click dispatch of custom event requirements and calculations directly to WhatsApp (`+91 98888 91465`).
+- 📦 **Transparent Packages** — Curated packages for Birthdays (from ₹35,000), Catering Buffets (₹650–₹1,250/guest), Corporate Summits (from ₹85,000), and Royal Weddings (from ₹2,75,000).
+- 🖼️ **Filterable Portfolio** — Filter by Weddings, Catering Concepts, Corporate Meets, and Birthday Celebrations.
+- 🌙 **Dark / Light Mode Toggle** — Fluid theme transition with persistent user preference storage.
+- 📱 **Mobile Optimized Drawer** — Responsive navigation with touch scroll locking.
+- 💬 **Floating Quick Action Hub** — Sticky WhatsApp chat launcher with notification ping.
 
 ---
 
@@ -51,11 +68,11 @@ The design philosophy blends **royal Indian heritage architecture** (jali motifs
 
 | Technology | Purpose |
 |---|---|
-| **HTML5** | Semantic page structure |
-| **Tailwind CSS (CDN)** | Utility-first styling with custom design tokens |
-| **Google Fonts** | Playfair Display + Plus Jakarta Sans |
-| **Google Material Symbols** | Iconography throughout the UI |
-| **Vanilla JavaScript** | Dark mode toggle, scroll animations, FAQ accordion |
+| **HTML5** | Semantic, accessible layout |
+| **Tailwind CSS (CDN)** | Bespoke gold, champagne, and charcoal luxury design system |
+| **Google Fonts** | Playfair Display, Cinzel & Plus Jakarta Sans |
+| **Google Material Symbols** | Outlined iconography |
+| **Vanilla JavaScript** | Theme toggle, interactive calculator, WhatsApp URL builder, and gallery filters |
 
 ---
 
@@ -63,11 +80,10 @@ The design philosophy blends **royal Indian heritage architecture** (jali motifs
 
 ```
 demo/
-├── index.html.html        # Main single-page application
-├── logo.jpg               # Virasat Royale brand logo (local asset)
-├── screen.png             # Project screenshot / preview
-├── DESIGN.md              # Full design system specification
-└── README.md              # This file
+├── index.html        # Main single-page application for SHUBHAM EVENTS
+├── README.md         # Documentation & specification
+├── DESIGN.md         # Design system references
+└── images/           # Brand assets and preview screenshots
 ```
 
 ---
@@ -75,85 +91,28 @@ demo/
 ## 🚀 Getting Started
 
 ### Prerequisites
-- [XAMPP](https://www.apachefriends.org/) with Apache module running
+- Any modern web browser (Google Chrome, Microsoft Edge, Safari, Firefox).
+- Optional: Local web server (e.g., [XAMPP](https://www.apachefriends.org/) with Apache enabled).
 
 ### Run Locally
 
-1. **Start XAMPP** → Start the **Apache** module from the XAMPP Control Panel.
-
-2. **Open in browser:**
-   `
-   http://localhost/demo/index.html.html
-   `
-
-3. No build step, no dependencies to install. The page loads directly.
-
----
-
-## 📄 Sections Overview
-
-| # | Section | Description |
-|---|---------|-------------|
-| 1 | **Top Bar** | Contact numbers, WhatsApp link, Pan-India badge, theme toggle |
-| 2 | **Navigation** | Sticky header with Rentals & Packages mega menus, Quote Cart |
-| 3 | **Hero** | Immersive palace backdrop with headline and CTAs |
-| 4 | **Stats Strip** | Trust indicators and key business metrics |
-| 5 | **Rental Categories** | 11 category tiles with icons |
-| 6 | **Featured Rentals** | Curated product showcase with pricing |
-| 7 | **Event Packages** | Three tiered packages with inclusions |
-| 8 | **How It Works** | 5-step consultation-to-teardown process |
-| 9 | **Occasions** | 8 event types served |
-| 10 | **FAQ** | Accordion with rental policies and logistics |
-| 11 | **Quote Enquiry** | Lead capture form with WhatsApp integration |
-| 12 | **Footer** | Atelier addresses, quick links, newsletter signup |
+1. Place the folder in your XAMPP web root (`c:\xampp\htdocs\demo`).
+2. Start Apache from the XAMPP Control Panel.
+3. Open in your browser:
+   ```
+   http://localhost/demo/index.html
+   ```
+   *Or open `index.html` directly in any web browser.*
 
 ---
 
-## 🎨 Design System
+## 📍 Contact & Tricity Service Area
 
-The full design system is documented in [DESIGN.md](DESIGN.md).
-
-### Color Palette
-
-| Token | Hex | Usage |
-|---|---|---|
-| primary | #775a19 | CTAs, highlights, borders |
-| primary-container | #c5a059 | Champagne gold accents |
-| primary-fixed | #ffdea5 | Warm gold on dark surfaces |
-| background | #fbf9f6 | Ivory silk canvas |
-| on-surface | #1b1c1a | Body text |
-| inverse-surface | #30312f | Dark footer / header bar |
-
-### Typography
-
-| Scale | Font | Size |
-|---|---|---|
-| display-hero | Playfair Display | 4.5rem |
-| headline-lg | Playfair Display | 3rem |
-| headline-md | Playfair Display | 2.25rem |
-| body-lg | Plus Jakarta Sans | 1.125rem |
-| body-md | Plus Jakarta Sans | 0.9375rem |
-| label-caps | Plus Jakarta Sans | 0.6875rem (tracked) |
-
----
-
-## 📞 Contact
-
-| Channel | Details |
-|---|---|
-| Phone | +91 98888 91465 |
-| WhatsApp | wa.me/919888891465 |
-| Email | sandeeplmitm@gmail.com |
-| Delhi | The Grand Pavilion, MG Road, New Delhi |
-| Mumbai | BKC Depot, Mumbai |
-| Hours | Mon - Sun: 10 AM - 8 PM IST |
-
----
-
-## 📸 Preview
-
-![Virasat Royale Preview](images/screen.png)
-
----
-
-© 2026 Virasat Royale Luxury Rentals Pvt. Ltd. · All Rights Reserved · GST Registered
+- **Direct Call:** [+91 98888 91465](tel:+919888891465)
+- **WhatsApp Concierge:** [+91 98888 91465](https://wa.me/919888891465)
+- **Email:** [sandeeplmitm@gmail.com](mailto:sandeeplmitm@gmail.com)
+- **Coverage Areas:**
+  - **Chandigarh:** Sectors 1 to 45, Industrial Area, Manimajra
+  - **Mohali:** Phases 1 to 11, Aerocity, IT City, Sector 70–82
+  - **Panchkula:** Sectors 1 to 25, MDC, Pinjore, Kalka
+  - **Periphery:** Zirakpur, Kharar, New Chandigarh, Dera Bassi
